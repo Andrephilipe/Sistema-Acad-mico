@@ -1,13 +1,13 @@
-package com.acc.preojetoAcademico;
+package acc.br.cadastro;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class PreojetoAcademicoApplication {
+public class CadastroAcademico {
 
 	public static void main(String[] args) {
-		SpringApplication.run(PreojetoAcademicoApplication.class, args);
+		SpringApplication.run(CadastroAcademico.class, args);
 	}
 
 }
