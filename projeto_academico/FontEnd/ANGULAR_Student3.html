@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+	</head>
+	<body ng-app="myApp">
+		<h1>Cadastro de pessoas: </h1>
+
+		<div ng-controller="myController">
+			<input type="button" value="Inserir pessoas" ng-click="postPessoas()" />
+			<br />				
+			<br />
+			Response Data: {{dados}}<br /> <br />
+					Error: {{error}}
+		</div>
+		<script>
+		    var myApp = angular.module('myApp', []);
+	   	
+			myApp.controller("myController", function ($scope, $http) {
+				var onSuccess = function successCallback(response) {$scope.dados = response.data;}
+
+				var onError = function errorCallback(response) {$scope.error = response;}
+			
+				var postReq = {
+						method: 'POST',
+						url   : 'http://localhost:8080/cadastro',
+						data  :	{  
+									id: 005,  
+									cpf: '4522333',  
+									nome: 'Andre teste',
+									sexo: 'feminino',  
+									tipo: 'bolsa'  
+								}   
+					};
+			
+				$scope.postPessoas = function () {
+					$http(postReq).then(onSuccess, onError);
+				};
+
+			});
+		</script>
+
+	</body>
+</html>

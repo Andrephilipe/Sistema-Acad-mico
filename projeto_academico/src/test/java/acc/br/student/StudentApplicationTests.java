@@ -1,10 +1,10 @@
-package com.acc.preojetoAcademico;
+package acc.br.student;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class PreojetoAcademicoApplicationTests {
+class StudentApplicationTests {
 
 	@Test
 	void contextLoads() {
