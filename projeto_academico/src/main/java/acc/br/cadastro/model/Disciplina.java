@@ -1,6 +1,8 @@
 package acc.br.cadastro.model;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -9,15 +11,17 @@ import javax.persistence.Table;
 public class Disciplina {
     
     @Id
-    @Column
-    private int idDisciplina;
+    @GeneratedValue(strategy=GenerationType.SEQUENCE, generator="CUST_SEQ")
+    @Column(name="idDisciplina")
+    private Integer idDisciplina;
+
     private String nomeDisc;
     private int discCredt;
 
-    public int getIdDisciplina() {
+    public Integer getIdDisciplina() {
         return idDisciplina;
     }
-    public void setId(int idDisciplina) {
+    public void setId(Integer idDisciplina) {
         this.idDisciplina = idDisciplina;
     }
     public String getNomeDisc() {
