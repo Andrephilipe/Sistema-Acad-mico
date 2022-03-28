@@ -1,4 +1,5 @@
 package acc.br.cadastro.model;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -13,40 +14,58 @@ public class Pessoa {
     @Id
     @GeneratedValue(strategy=GenerationType.SEQUENCE, generator="ID_SEQ")
     @Column(name="id")
-    private Integer id;
+    private Integer idPessoa;
 
-    private String nome;
-    private int cpf;
-    private String sexo;
+    @Column(name="PESSOAnome", nullable=false, length=45)
+    private String pessoaNome;
+
+    @Column(name="CPF", nullable=false, length=14)
+    private String cpf;
+
+    public enum sexo{
+        MASCULINO, FEMININO
+    };
+    private String pessoaSexo;
     private String tipo;
     public Integer getId() {
-        return id;
+        return idPessoa;
     }
-    public void setId(Integer id) {
-        this.id = id;
+    //GETS E SETERS ID PESSOA
+    public void setId(Integer idPessoa) {
+        this.idPessoa = idPessoa;
     }
-    public String getNome() {
-        return nome;
+    public String getPessoaNome() {
+        return pessoaNome;
     }
-    public void setNome(String nome) {
-        this.nome = nome;
+    public void setPessoaNome(String pessoaNome) {
+        try{
+                this.pessoaNome = pessoaNome;
+        }
+        catch(NullPointerException e)
+        {         
+            System.out.println("O Campo Nome é obrigatório.");
     }
-    public String getSexo() {
-        return sexo;
+}
+    //GETS E SETERS ID PESSOA
+    
+    //GETS E SETERS TIPO SEXO
+    public String getPessoaSexo() {
+        return pessoaSexo;
     }
-    public void setSexo(String sexo) {
-        this.sexo = sexo;
+    public void setPessoaSexo(String pessoaSexo) {
+       this.pessoaSexo = pessoaSexo;
     }
+
     public String getTipo() {
         return tipo;
     }
     public void setTipo(String tipo) {
         this.tipo = tipo;
     }
-    public int getCpf() {
+    public String getCpf() {
         return cpf;
     }
-    public void setCpf(int cpf) {
+    public void setCpf(String cpf) {
         this.cpf = cpf;
     }
     

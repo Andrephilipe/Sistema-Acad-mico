@@ -22,9 +22,9 @@ public class PessoaService {
         return pessoas;
     }
 
-    public Pessoa getStudentById(int id)
+    public Pessoa getStudentById(Integer idPessoa)
     {
-        return pessoaRepository.findById(id).get();
+        return pessoaRepository.findById(idPessoa).get();
     }
 
     public void saveOrUpdate(Pessoa pessoa)
@@ -32,9 +32,9 @@ public class PessoaService {
         pessoaRepository.save(pessoa);
     }
 
-    public void delete(int id)
+    public void delete(Integer idPessoa)
     {
-        pessoaRepository.deleteById(id);
+        pessoaRepository.deleteById(idPessoa);
     }
 
 	public void save(Pessoa pessoa) {
