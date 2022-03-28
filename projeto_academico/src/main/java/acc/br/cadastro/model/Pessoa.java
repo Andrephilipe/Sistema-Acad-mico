@@ -1,20 +1,21 @@
 package acc.br.cadastro.model;
 
 import javax.persistence.Column;
-import javax.persistence.Entity;
+//import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.MappedSuperclass;
 import javax.persistence.Table;
 
-@Entity
+@MappedSuperclass
 @Table
-public class Pessoa {
+public abstract class Pessoa {
 
     @Id
     @GeneratedValue(strategy=GenerationType.SEQUENCE, generator="ID_SEQ")
     @Column(name="id")
-    private Integer idPessoa;
+    public Integer idPessoa;
 
     @Column(name="PESSOAnome", nullable=false, length=45)
     private String pessoaNome;
@@ -37,19 +38,24 @@ public class Pessoa {
     public String getPessoaNome() {
         return pessoaNome;
     }
-    public void setPessoaNome(String pessoaNome) {
-        try{
-                this.pessoaNome = pessoaNome;
+    public void setPessoaNome(String pessoaNome) throws Exception {
+
+        if(pessoaNome == null || pessoaNome == ""){
+            throw new Exception("O Campo Nome e obrigatorio.");
         }
-        catch(NullPointerException e)
-        {         
-            System.out.println("O Campo Nome é obrigatório.");
-    }
+        else if(pessoaNome.length() > 45)
+        {
+            throw new Exception("O numero de caracteres para o campo deve ser menor ou igual a 45.");
+        }
+        else
+        {
+           this.pessoaNome = pessoaNome; 
+        }
 }
     //GETS E SETERS ID PESSOA
     
     //GETS E SETERS TIPO SEXO
-    public String getPessoaSexo() {
+    public String getSexo() {
         return pessoaSexo;
     }
     public void setPessoaSexo(String pessoaSexo) {
@@ -62,11 +68,23 @@ public class Pessoa {
     public void setTipo(String tipo) {
         this.tipo = tipo;
     }
+    //Inicio - Gets e Sets campo cpf
     public String getCpf() {
         return cpf;
     }
-    public void setCpf(String cpf) {
-        this.cpf = cpf;
+    public void setCpf(String cpf) throws Exception {
+
+        if(cpf == null || cpf == ""){
+            throw new Exception("O Campo CPF e obrigatorio.");
+        }
+        else if(cpf.length() > 14)
+        {
+            throw new Exception("O numero de caracteres para o campo deve ser menor ou igual a 14.");
+        }
+        else
+        {
+           this.cpf = cpf; 
+        }
     }
-    
+    //Fim - Gets e Sets campo cpf
 }
