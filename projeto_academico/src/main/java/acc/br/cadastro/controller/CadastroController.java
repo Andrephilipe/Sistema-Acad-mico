@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import acc.br.cadastro.model.Pessoa;
+import acc.br.cadastro.model.Disciplina;
+import acc.br.cadastro.services.DisciplinaService;
 import acc.br.cadastro.services.PessoaService;
 
 //Criando o rest controller
@@ -18,9 +20,11 @@ public class CadastroController {
     
     @Autowired
     PessoaService pessoaService;
+    @Autowired
+    DisciplinaService disciplinaService;
 
     @GetMapping("/cadastro")
-    private List<Pessoa> getAllStudent()
+    private List<Pessoa> getAllPessoa()
     {
         return pessoaService.getAllPessoa();
     }
@@ -42,5 +46,23 @@ public class CadastroController {
     {
         pessoaService.saveOrUpdate(pessoa);
         return pessoa.getId();
+    }
+
+    //ANOTACAO DISCIPLINA
+    @GetMapping("/disciplina")
+    private List<Disciplina> getAllDisciplina()
+    {
+        return disciplinaService.getAllDisciplina();
+    }
+    @PostMapping("/disciplina")
+    private int saveDisciplina(@RequestBody Disciplina disciplina)
+    {
+        disciplinaService.saveOrUpdate(disciplina);
+        return disciplina.getIdDisciplina();
+    }
+    @GetMapping("/disciplina/{idDisciplina}")
+    private Disciplina getDisciplina(@PathVariable("idDisciplina") int idDisciplina)
+    {
+        return disciplinaService.getDisciplinaById(idDisciplina);
     }
 }

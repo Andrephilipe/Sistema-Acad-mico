@@ -11,19 +11,19 @@ public class Disciplina {
     @Id
     @Column
     private int idDisciplina;
-    private char nomeDisc;
+    private String nomeDisc;
     private int discCredt;
 
-    public int getId() {
+    public int getIdDisciplina() {
         return idDisciplina;
     }
     public void setId(int idDisciplina) {
         this.idDisciplina = idDisciplina;
     }
-    public int getNomeDisc() {
+    public String getNomeDisc() {
         return nomeDisc;
     }
-    public void setNomeDisc(char nomeDisc) {
+    public void setNomeDisc(String nomeDisc) {
         this.nomeDisc = nomeDisc;
     }
     public int getDiscCredt() {

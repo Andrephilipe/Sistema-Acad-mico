@@ -33,7 +33,7 @@ public class Pessoa {
     public void setSexo(String sexo) {
         this.sexo = sexo;
     }
-    public String Tipo() {
+    public String getTipo() {
         return tipo;
     }
     public void setTipo(String tipo) {

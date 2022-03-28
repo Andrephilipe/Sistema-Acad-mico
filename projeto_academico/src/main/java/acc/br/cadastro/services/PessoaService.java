@@ -6,7 +6,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acc.br.cadastro.model.Pessoa;
-import acc.br.cadastro.model.Aluno;
 import acc.br.cadastro.repository.PessoaRepository;
 //import antlr.collections.List;
 
