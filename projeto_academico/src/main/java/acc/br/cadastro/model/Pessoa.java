@@ -14,7 +14,7 @@ public abstract class Pessoa {
 
     @Id
     @GeneratedValue(strategy=GenerationType.SEQUENCE, generator="ID_SEQ")
-    @Column(name="id")
+    @Column(name="idPessoa")
     public Integer idPessoa;
 
     @Column(name="PESSOAnome", nullable=false, length=45)
@@ -23,11 +23,13 @@ public abstract class Pessoa {
     @Column(name="CPF", nullable=false, length=14)
     private String cpf;
 
-    public enum sexo{
-        MASCULINO, FEMININO
+    public enum Sexo{
+        MASCULINO, FEMININO, OUTROS
     };
     private String pessoaSexo;
     private String tipo;
+    public int Turma_idTurma;
+
     public Integer getId() {
         return idPessoa;
     }
@@ -55,11 +57,33 @@ public abstract class Pessoa {
     //GETS E SETERS ID PESSOA
     
     //GETS E SETERS TIPO SEXO
-    public String getSexo() {
+    public String getPessoaSexo() {
         return pessoaSexo;
     }
-    public void setPessoaSexo(String pessoaSexo) {
-       this.pessoaSexo = pessoaSexo;
+    public void setPessoaSexo(String pessoaSexo) throws Exception {
+        System.out.println(pessoaSexo);
+        String sexoTm = Sexo.MASCULINO.toString();
+        if(pessoaSexo == sexoTm)
+        {
+            this.pessoaSexo = sexoTm;
+        }
+        if(pessoaSexo == "FEMININO")
+        {
+            String sexoT = Sexo.FEMININO.toString();
+            pessoaSexo = sexoT;
+            this.pessoaSexo = pessoaSexo;
+        }
+        if(pessoaSexo == "OUTROS")
+        {
+            String sexoT = Sexo.OUTROS.toString();
+            pessoaSexo = sexoT;
+            this.pessoaSexo = pessoaSexo;
+        }
+        else
+        {
+            throw new Exception("Campo sexo nao informado.");
+        }
+
     }
 
     public String getTipo() {

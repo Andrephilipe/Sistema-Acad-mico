@@ -4,6 +4,6 @@ import org.springframework.data.repository.CrudRepository;
 
 import acc.br.cadastro.model.Aluno;
 
-public interface AlunoRepository extends CrudRepository<Aluno, String>{
+public interface AlunoRepository extends CrudRepository<Aluno, Integer>{
     
 }

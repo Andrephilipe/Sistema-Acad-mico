@@ -65,6 +65,11 @@ public class CadastroController {
         disciplinaService.saveOrUpdate(disciplina);
         return disciplina.getIdDisciplina();
     }
+    @DeleteMapping("/disciplina/{idDisciplina}")
+    private void deleteDisciplina(@PathVariable("idDisciplina") int idDisciplina)
+    {
+        disciplinaService.delete(idDisciplina);
+    }
     @GetMapping("/disciplina/{idDisciplina}")
     private Disciplina getDisciplina(@PathVariable("idDisciplina") int idDisciplina)
     {
@@ -86,5 +91,10 @@ public class CadastroController {
     private Disciplina getAluno(@PathVariable("idPessoa") int id)
     {
         return alunoService.getById(id);
+    }
+    @DeleteMapping("/aluno/{idPessoa}")
+    private void deleteAluno(@PathVariable("idPessoa") int idPessoa)
+    {
+        alunoService.delete(idPessoa);
     }
 }
