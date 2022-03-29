@@ -1,6 +1,9 @@
 package acc.br.cadastro.model;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 //import javax.persistence.GeneratedValue;
 //import javax.persistence.GenerationType;
 //import javax.persistence.Id;
@@ -10,31 +13,30 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "ALUNO")
 public class Aluno extends Pessoa{
-    
-    @Column
-    private String name;
-    @Column
-    private int mensalidade;
-    @Column
-    private char tipoBolsa;
+    //@Id
+    //@GeneratedValue(strategy=GenerationType.SEQUENCE, generator="aluno_sequence")
+    @Column(name="idAluno")
+    public int idAluno;
+    private int mensalidade_VL_mensalidade;
+    private char AlunoTipoBolsa;
 
-    public String getName() {
-        return name;
+    public int getIdAluno() {
+        return idPessoa;
     }
-    public void setName(String name) {
-        this.name = name;
+    public void setIdAluno(int idPessoa) {
+        this.idPessoa = idAluno;
     }
     public int getMen() {
-        return mensalidade;
+        return mensalidade_VL_mensalidade;
     }
-    public void setMen(int mensalidade) {
-        this.mensalidade = mensalidade;
+    public void setMen(int mensalidade_VL_mensalidade) {
+        this.mensalidade_VL_mensalidade = mensalidade_VL_mensalidade;
     }
     public char getBolsa() {
-        return tipoBolsa;
+        return AlunoTipoBolsa;
     }
-    public void setBolsa(char tipoBolsa) {
-        this.tipoBolsa = tipoBolsa;
+    public void setBolsa(char AlunoTipoBolsa) {
+        this.AlunoTipoBolsa = AlunoTipoBolsa;
     }
 
 }
