@@ -61,8 +61,8 @@ public abstract class Pessoa {
         return pessoaSexo;
     }
     public void setPessoaSexo(String pessoaSexo) throws Exception {
-        System.out.println(pessoaSexo);
-        String sexoTm = Sexo.MASCULINO.toString();
+        //System.out.println(pessoaSexo);
+        /*String sexoTm = Sexo.MASCULINO.toString();
         if(pessoaSexo == sexoTm)
         {
             this.pessoaSexo = sexoTm;
@@ -82,8 +82,8 @@ public abstract class Pessoa {
         else
         {
             throw new Exception("Campo sexo nao informado.");
-        }
-
+        }*/
+        this.pessoaSexo = pessoaSexo;
     }
 
     public String getTipo() {
