@@ -31,10 +31,10 @@ public class Aluno extends Pessoa implements Serializable{
     private enum tipoAluno{
         ALUNO, ALUNOBOLSISTA
     }
-    private enum tipoBolsa
+    /*private enum tipoBolsa
     {
         B90, B50, B10
-    }
+    }*/
 
     public int getIdAluno() {
         return idPessoa;
