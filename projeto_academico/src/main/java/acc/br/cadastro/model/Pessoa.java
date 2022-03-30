@@ -7,10 +7,15 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.MappedSuperclass;
 import javax.persistence.Table;
+import javax.print.DocFlavor.STRING;
+
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.databind.ObjectMapper;
 
 @MappedSuperclass
 @Table
-public abstract class Pessoa {
+public class Pessoa {
 
     @Id
     @GeneratedValue(strategy=GenerationType.SEQUENCE, generator="ID_SEQ")
@@ -22,10 +27,16 @@ public abstract class Pessoa {
 
     @Column(name="CPF", nullable=false, length=14)
     private String cpf;
+    //teste sexo id
 
-    public enum Sexo{
-        MASCULINO, FEMININO, OUTROS
-    };
+    public enum Sexo {
+
+        MASCULINO,
+        FEMININO,
+        OUTROS;
+    }
+    //teste sexo id
+
     private String pessoaSexo;
     private String tipo;
     public int Turma_idTurma;
@@ -61,29 +72,39 @@ public abstract class Pessoa {
         return pessoaSexo;
     }
     public void setPessoaSexo(String pessoaSexo) throws Exception {
-        //System.out.println(pessoaSexo);
-        /*String sexoTm = Sexo.MASCULINO.toString();
-        if(pessoaSexo == sexoTm)
-        {
-            this.pessoaSexo = sexoTm;
-        }
-        if(pessoaSexo == "FEMININO")
-        {
-            String sexoT = Sexo.FEMININO.toString();
-            pessoaSexo = sexoT;
-            this.pessoaSexo = pessoaSexo;
-        }
-        if(pessoaSexo == "OUTROS")
-        {
-            String sexoT = Sexo.OUTROS.toString();
-            pessoaSexo = sexoT;
-            this.pessoaSexo = pessoaSexo;
-        }
-        else
-        {
-            throw new Exception("Campo sexo nao informado.");
-        }*/
+
         this.pessoaSexo = pessoaSexo;
+        System.out.println("INICIO: case pessoaSexo");
+        switch (pessoaSexo){
+
+            case "MASCULINO":
+                System.out.println("O sexo informado é MASCULINO");
+                this.pessoaSexo = new ObjectMapper().writeValueAsString(Sexo.MASCULINO);
+                break;
+
+            case "FEMININO":
+                System.out.println("O sexo informado é FEMININO");
+                this.pessoaSexo = new ObjectMapper().writeValueAsString(Sexo.FEMININO);
+                break;
+
+            case "OUTROS":
+                System.out.println("O sexo informado é OUTROS");
+                this.pessoaSexo = new ObjectMapper().writeValueAsString(Sexo.OUTROS);
+                break;
+
+            case "":
+                throw new Exception("O campo sexo é obrigatorio.");
+
+
+            case "null":
+                throw new Exception("O campo não pode ser NULL.");
+
+            default:
+                throw new Exception("Os dados válidos são 'MASCULINO, FEMININO OU OUTROS.'");
+            
+        
+        }
+        System.out.println("FIM: case pessoaSexo");
     }
 
     public String getTipo() {
