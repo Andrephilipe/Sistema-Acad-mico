@@ -1,4 +1,4 @@
-package acc.br.student;
+package acc.br.cadastro;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
