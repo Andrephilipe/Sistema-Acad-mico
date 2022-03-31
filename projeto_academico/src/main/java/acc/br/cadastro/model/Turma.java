@@ -1,8 +1,13 @@
 package acc.br.cadastro.model;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.Table;
+
 
 
 @Entity
@@ -10,21 +15,24 @@ import javax.persistence.Table;
 public class Turma {
     
     @Id
-    @Column
-    private int id;
-    private char turma;
+    @GeneratedValue(strategy=GenerationType.SEQUENCE, generator="ID_TURMA_SEG")
+    @Column(name="idTurma")
+    @JoinColumn(name = "Turma_idTurma")
+    private int idTurma;
+    @Column(name="turmaDesc", nullable=false, length=45)
+    private String turmaDesc;
 
-    public int getId() {
-        return id;
+    public int getIdTurma() {
+        return idTurma;
     }
-    public void setId(int id) {
-        this.id = id;
+    public void setIdTurma(int idTurma) {
+        this.idTurma = idTurma;
     }
-    public char getTurma() {
-        return turma;
+    public String getTurmaDesc() {
+        return turmaDesc;
     }
-    public void setTurma(char turma) {
-        this.turma = turma;
+    public void setTurmaDesc(String turmaDesc) {
+        this.turmaDesc = turmaDesc;
     }
-
+    
 }

@@ -6,17 +6,15 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acc.br.cadastro.model.Aluno;
-import acc.br.cadastro.model.Disciplina;
-import acc.br.cadastro.model.Pessoa;
 import acc.br.cadastro.repository.AlunoRepository;
-//import acc.br.cadastro.repository.PessoaRepository;
-//import antlr.collections.List;
+
 
 @Service
 public class AlunoService {
     
     @Autowired
     AlunoRepository alunoRepository;
+
 
     public List<Aluno> getAllAluno()
     {
@@ -43,8 +41,10 @@ public class AlunoService {
 	public void save(Aluno alunos) {
 	}
 
-    public Disciplina getById(int id) {
+    public Aluno getById(int id) {
         return null;
     }
+
+
 }
 

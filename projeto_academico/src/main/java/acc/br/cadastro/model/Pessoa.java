@@ -1,16 +1,13 @@
 package acc.br.cadastro.model;
 
 import javax.persistence.Column;
-//import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.MappedSuperclass;
 import javax.persistence.Table;
-import javax.print.DocFlavor.STRING;
 
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 @MappedSuperclass
@@ -39,6 +36,13 @@ public class Pessoa {
 
     private String pessoaSexo;
     private String tipo;
+    
+    //@OneToMany
+    @JoinColumn(name = "idTurma")
+    public Turma getTurma(){
+        return getTurma();
+    }
+    @Column(name = "Turma_idTurma")
     public int Turma_idTurma;
 
     public Integer getId() {
@@ -132,4 +136,12 @@ public class Pessoa {
         }
     }
     //Fim - Gets e Sets campo cpf
+    //geters e seters id turma
+
+    public int getTurma_idTurma() {
+        return Turma_idTurma;
+    }
+    public void setidTurma(int turma_idTurma) {
+        this.Turma_idTurma = turma_idTurma;
+    }
 }
