@@ -1,18 +1,11 @@
 package acc.br.cadastro.model;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
-import javax.persistence.FetchType;
-//import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-import javax.persistence.JoinTable;
-import javax.persistence.ManyToOne;
 import javax.persistence.MappedSuperclass;
-import javax.persistence.OneToMany;
-import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -46,7 +39,10 @@ public class Pessoa {
     
     //@OneToMany
     @JoinColumn(name = "idTurma")
-    @Column(name = "Truma_idTurma")
+    public Turma getTurma(){
+        return getTurma();
+    }
+    @Column(name = "Turma_idTurma")
     public int Turma_idTurma;
 
     public Integer getId() {

@@ -10,11 +10,14 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import acc.br.cadastro.model.Pessoa;
+import acc.br.cadastro.model.Turma;
 import acc.br.cadastro.model.Aluno;
 import acc.br.cadastro.model.Disciplina;
 import acc.br.cadastro.services.DisciplinaService;
 import acc.br.cadastro.services.PessoaService;
 import acc.br.cadastro.services.AlunoService;
+import acc.br.cadastro.services.TurmaService;
+
 
 
 //Criando o rest controller
@@ -27,6 +30,8 @@ public class CadastroController {
     DisciplinaService disciplinaService;
     @Autowired
     AlunoService alunoService;
+    @Autowired
+    TurmaService turmaService;
 
     @GetMapping("/cadastro")
     private List<Pessoa> getAllPessoa()
@@ -88,7 +93,7 @@ public class CadastroController {
         return aluno.getId();
     }
     @GetMapping("/aluno/{idPessoa}")
-    private Disciplina getAluno(@PathVariable("idPessoa") int id)
+    private Aluno getAluno(@PathVariable("idPessoa") int id)
     {
         return alunoService.getById(id);
     }
@@ -97,4 +102,26 @@ public class CadastroController {
     {
         alunoService.delete(idPessoa);
     }
+       //ANOTACAO TURMA
+       @GetMapping("/turma")
+       private antlr.collections.List getAllTurmas()
+       {
+           return turmaService.getAllTurmas();
+       }
+       @PostMapping("/turma")
+       private int saveAluno(@RequestBody Turma turma)
+       {
+                turmaService.saveOrUpdate(turma);
+           return turma.getIdTurma();
+       }
+       @GetMapping("/turma/{idTurma}")
+       private Turma getTurma(@PathVariable("idTurma") int id)
+       {
+           return turmaService.getById(id);
+       }
+       @DeleteMapping("/aluno/{idTurma}")
+       private void deleteTurma(@PathVariable("idTurma") int idTurma)
+       {
+            turmaService.delete(idTurma);
+       } 
 }
