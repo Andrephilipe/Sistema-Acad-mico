@@ -104,7 +104,7 @@ public class CadastroController {
     }
        //ANOTACAO TURMA
        @GetMapping("/turma")
-       private antlr.collections.List getAllTurmas()
+       private List<Turma> getAllTurma()
        {
            return turmaService.getAllTurmas();
        }
@@ -123,5 +123,5 @@ public class CadastroController {
        private void deleteTurma(@PathVariable("idTurma") int idTurma)
        {
             turmaService.delete(idTurma);
-       } 
+       }
 }

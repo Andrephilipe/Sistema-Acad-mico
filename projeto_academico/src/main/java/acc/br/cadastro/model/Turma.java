@@ -1,23 +1,20 @@
 package acc.br.cadastro.model;
 
+
+import java.io.Serializable;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
 import javax.persistence.Table;
-
-
 
 @Entity
 @Table
-public class Turma {
+public class Turma implements Serializable{
     
     @Id
     @GeneratedValue(strategy=GenerationType.SEQUENCE, generator="ID_TURMA_SEG")
-    @Column(name="idTurma")
-    @JoinColumn(name = "Turma_idTurma")
     private int idTurma;
     @Column(name="turmaDesc", nullable=false, length=45)
     private String turmaDesc;
@@ -32,7 +29,20 @@ public class Turma {
         return turmaDesc;
     }
     public void setTurmaDesc(String turmaDesc) {
+
+        String MI1 = "MI1 – Manha Iniciante 1";
+        String TI1 = "TI1 -  Tarde iniciante 1";
+        String NI1 = "NI1 – Noite iniciante 1";
         this.turmaDesc = turmaDesc;
+
+        if(turmaDesc.equals(MI1) || turmaDesc.equals(TI1) || turmaDesc.equals(NI1) == true)
+        {
+            this.turmaDesc = turmaDesc;
+        }
+        else
+        {
+            this.turmaDesc = "não identificado";
+        }
     }
     
 }
