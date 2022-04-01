@@ -1,17 +1,8 @@
 package acc.br.cadastro.model;
-import java.io.Serializable;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-//import javax.persistence.GeneratedValue;
-//import javax.persistence.GenerationType;
-//import javax.persistence.Id;
-//import javax.persistence.GeneratedValue;
-//import javax.persistence.GenerationType;
-//import javax.persistence.Id;
 import javax.persistence.Table;
-//import javax.persistence.criteria.CriteriaBuilder.Case;
-
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
@@ -20,9 +11,9 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 @Entity
 @Table(name = "ALUNO")
-public class Aluno extends Pessoa implements Serializable{
+public class Aluno extends Pessoa{
     //@Id
-    //@GeneratedValue(strategy=GenerationType.SEQUENCE, generator="aluno_sequence")
+   // @GeneratedValue(strategy=GenerationType.SEQUENCE, generator="aluno_sequence")
     @Column(name="idAluno")
     public int idAluno;
     private String turma;
@@ -80,10 +71,10 @@ public class Aluno extends Pessoa implements Serializable{
 
     }
 
-    public String getTurma() {
+    public String getTurmas() {
         return turma;
     }
-    public void setTurma(String turma) {
+    public void setTurmas(String turma) {
         this.turma = turma;
     }
 

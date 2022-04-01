@@ -9,9 +9,13 @@ import javax.persistence.Table;
 public class DisciplinaAluno {
     
     @Id
-    @Column
+    @Column(name = "DisciplinaCreditos")
     private int idDisciplina;
+
+    @Column(name = "Aluno_IDPessoa")
     private int idAluno;
+
+    @Column(name = "Aluno_IDAlunos")
     private int idPessoa;
 
     public int getId() {

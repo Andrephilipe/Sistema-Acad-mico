@@ -17,6 +17,8 @@ public class Disciplina {
 
     @Column(name="DISCIPLINANome", nullable=false, length=45)
     private String nomeDisc;
+
+    @Column(name = "DisciplinaCreditos")
     private int discCredt;
 
     public Integer getIdDisciplina() {

@@ -1,10 +1,10 @@
 package acc.br.cadastro.model;
 
+import java.io.Serializable;
 import javax.persistence.Column;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
 import javax.persistence.MappedSuperclass;
 import javax.persistence.Table;
 
@@ -12,7 +12,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 @MappedSuperclass
 @Table
-public class Pessoa {
+public class Pessoa implements Serializable{
 
     @Id
     @GeneratedValue(strategy=GenerationType.SEQUENCE, generator="ID_SEQ")
@@ -33,17 +33,12 @@ public class Pessoa {
         OUTROS;
     }
     //teste sexo id
-
     private String pessoaSexo;
     private String tipo;
     
-    //@OneToMany
-    @JoinColumn(name = "idTurma")
-    public Turma getTurma(){
-        return getTurma();
-    }
     @Column(name = "Turma_idTurma")
     public int Turma_idTurma;
+    //tentativa de  join entre colunas
 
     public Integer getId() {
         return idPessoa;
