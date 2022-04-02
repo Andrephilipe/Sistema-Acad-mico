@@ -15,6 +15,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+
+import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 //FIM: Imports da classe
 
@@ -120,11 +122,36 @@ public class Pessoa {
     /*FIM: GETRS E SETS PESSOASexo*/ 
 
     /*INICIO: GETRS E SETS PessoaTipo*/ 
+    
+    private enum pessoaTipoA{
+        ALUNO, ALUNOBOLSISTA
+    }
+
     public String getTipo() {
         return tipo;
     }
-    public void setTipo(String tipo) {
+    public void setTipo(String tipo) throws Exception {
         this.tipo = tipo;
+        String alunoB = "ALUNO";//new ObjectMapper().writeValueAsString(pessoaTipoA.ALUNOBOLSISTA);
+        String alunoNb = "ALUNOBOLSISTA";//new ObjectMapper().writeValueAsString(pessoaTipoA.ALUNO);
+        System.out.println(alunoB);
+        System.out.println(alunoNb);
+        System.out.println(tipo);
+        if(tipo == "" || tipo == null){
+
+            throw new Exception("O campo tipo é obrigatorio.");
+            //sthis.tipo = new ObjectMapper().writeValueAsString(pessoaTipoA.ALUNO);
+        }
+        else if(tipo.equals(alunoB) || tipo.equals(alunoNb) == true)
+        {
+            System.out.println(tipo);
+            this.tipo = tipo;
+        }
+        else
+        {
+            throw new Exception("Os valores tipo devem ser ALUNO OU ALUNOBOLSISTA..");
+        }
+
     }
     /*FIM: GETRS E SETS PessoaTipo*/ 
 
