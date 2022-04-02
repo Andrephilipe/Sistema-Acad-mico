@@ -1,56 +1,70 @@
+/*******************************************
+ * Autor : André Philipe
+ * Data criacao: 26/03/2022
+ * Nome do arquivo: Classe Pessoa
+ * Arquivo de implementacao da classe pessoa
+ *******************************************/
+
+/****Pacote da classe****/
 package acc.br.cadastro.model;
 
-import java.io.Serializable;
+//INICIO: Imports da classe
 import javax.persistence.Column;
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.MappedSuperclass;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+//FIM: Imports da classe
 
-@MappedSuperclass
 @Table
-public class Pessoa implements Serializable{
+@Entity
+public class Pessoa {
 
     @Id
     @GeneratedValue(strategy=GenerationType.SEQUENCE, generator="ID_SEQ")
-    @Column(name="idPessoa")
+    @Column(name="IDpessoa")
     public Integer idPessoa;
 
     @Column(name="PESSOAnome", nullable=false, length=45)
     private String pessoaNome;
 
-    @Column(name="CPF", nullable=false, length=14)
+    @Column(name="PESSOACPF", nullable=false, length=14)
     private String cpf;
-    //teste sexo id
-
+    //Enum tipo sexo
     public enum Sexo {
 
         MASCULINO,
         FEMININO,
         OUTROS;
     }
-    //teste sexo id
+    @Column(name = "PESSOASexo")
     private String pessoaSexo;
+
+    @Column(name = "PessoaTipo")
     private String tipo;
-    
+
     @Column(name = "Turma_idTurma")
     public int Turma_idTurma;
-    //tentativa de  join entre colunas
 
+    /*INICIO: GETRS E SETS IDpessoa*/ 
     public Integer getId() {
         return idPessoa;
     }
-    //GETS E SETERS ID PESSOA
     public void setId(Integer idPessoa) {
         this.idPessoa = idPessoa;
     }
+    /*FIM: GETRS E SETS IDpessoa*/ 
+
+    /*INICIO: GETRS E SETS PESSOAnome*/ 
     public String getPessoaNome() {
         return pessoaNome;
     }
-    public void setPessoaNome(String pessoaNome) throws Exception {
+    public void setPessoaNome(String pessoaNome) throws Exception 
+    {
 
         if(pessoaNome == null || pessoaNome == ""){
             throw new Exception("O Campo Nome e obrigatorio.");
@@ -63,10 +77,10 @@ public class Pessoa implements Serializable{
         {
            this.pessoaNome = pessoaNome; 
         }
-}
-    //GETS E SETERS ID PESSOA
+    }
+    /*FIM: GETRS E SETS PESSOAnome*/ 
     
-    //GETS E SETERS TIPO SEXO
+    /*INICIO: GETRS E SETS PESSOASexo*/ 
     public String getPessoaSexo() {
         return pessoaSexo;
     }
@@ -105,14 +119,43 @@ public class Pessoa implements Serializable{
         }
         System.out.println("FIM: case pessoaSexo");
     }
+    /*FIM: GETRS E SETS PESSOASexo*/ 
+
+    /*INICIO: GETRS E SETS PessoaTipo*/ 
+    
+    private enum pessoaTipoA{
+        ALUNO, ALUNOBOLSISTA
+    }
 
     public String getTipo() {
         return tipo;
     }
-    public void setTipo(String tipo) {
+    public void setTipo(String tipo) throws Exception {
         this.tipo = tipo;
+        String alunoB = "ALUNO";//new ObjectMapper().writeValueAsString(pessoaTipoA.ALUNOBOLSISTA);
+        String alunoNb = "ALUNOBOLSISTA";//new ObjectMapper().writeValueAsString(pessoaTipoA.ALUNO);
+        System.out.println(alunoB);
+        System.out.println(alunoNb);
+        System.out.println(tipo);
+        if(tipo == "" || tipo == null){
+
+            throw new Exception("O campo tipo é obrigatorio.");
+            //sthis.tipo = new ObjectMapper().writeValueAsString(pessoaTipoA.ALUNO);
+        }
+        else if(tipo.equals(alunoB) || tipo.equals(alunoNb) == true)
+        {
+            System.out.println(tipo);
+            this.tipo = tipo;
+        }
+        else
+        {
+            throw new Exception("Os valores tipo devem ser ALUNO OU ALUNOBOLSISTA..");
+        }
+
     }
-    //Inicio - Gets e Sets campo cpf
+    /*FIM: GETRS E SETS PessoaTipo*/ 
+
+    /*INICIO: GETRS E SETS PESSOACPF*/ 
     public String getCpf() {
         return cpf;
     }
@@ -130,13 +173,14 @@ public class Pessoa implements Serializable{
            this.cpf = cpf; 
         }
     }
-    //Fim - Gets e Sets campo cpf
-    //geters e seters id turma
+    /*FIM: GETRS E SETS PESSOACPF*/ 
 
+    /*INICIO: GETRS E SETS Turma_idTurma*/ 
     public int getTurma_idTurma() {
         return Turma_idTurma;
     }
     public void setidTurma(int turma_idTurma) {
         this.Turma_idTurma = turma_idTurma;
     }
+    /*FIM: GETRS E SETS Turma_idTurma*/ 
 }

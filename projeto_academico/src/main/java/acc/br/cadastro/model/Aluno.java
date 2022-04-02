@@ -1,37 +1,43 @@
+/********************************************
+ * Autor : André Philipe
+ * Data criacao: 26/03/2022
+ * Nome do arquivo: Classe Aluno
+ * Arquivo de implementacao da classe Aluno
+ ********************************************/
+
+ /****Pacote da classe****/
 package acc.br.cadastro.model;
 
+//INICIO: Imports da classe
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import javax.persistence.Table;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-
-
+//FIM: Imports da classe
 
 
 @Entity
 @Table(name = "ALUNO")
-public class Aluno extends Pessoa{
-    //@Id
-   // @GeneratedValue(strategy=GenerationType.SEQUENCE, generator="aluno_sequence")
+public class Aluno{
+    @Id
+    @GeneratedValue(strategy=GenerationType.SEQUENCE, generator="aluno_sequence")
     @Column(name="idAluno")
     public int idAluno;
-    private String turma;
     private int mensalidade_VL_mensalidade;
     private String tipo;
     private enum tipoAluno{
         ALUNO, ALUNOBOLSISTA
     }
-    /*private enum tipoBolsa
-    {
-        B90, B50, B10
-    }*/
 
     public int getIdAluno() {
-        return idPessoa;
+        return idAluno;
     }
-    public void setIdAluno(int idPessoa) {
-        this.idPessoa = idAluno;
+    public void setIdAluno(int idAluno) {
+        this.idAluno = idAluno;
     }
     public int getMen() {
         return mensalidade_VL_mensalidade;
@@ -69,13 +75,6 @@ public class Aluno extends Pessoa{
         }
         System.out.println("Fim case de mensalidades.");
 
-    }
-
-    public String getTurmas() {
-        return turma;
-    }
-    public void setTurmas(String turma) {
-        this.turma = turma;
     }
 
     //teste tipo bolsa

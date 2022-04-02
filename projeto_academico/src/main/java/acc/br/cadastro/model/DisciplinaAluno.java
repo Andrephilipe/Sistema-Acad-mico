@@ -9,8 +9,8 @@ import javax.persistence.Table;
 public class DisciplinaAluno {
     
     @Id
-    @Column(name = "DisciplinaCreditos")
-    private int idDisciplina;
+    @Column(name = "idDisciplinaAl")
+    private int idDisciplinaAl;
 
     @Column(name = "Aluno_IDPessoa")
     private int idAluno;
@@ -19,10 +19,10 @@ public class DisciplinaAluno {
     private int idPessoa;
 
     public int getId() {
-        return idDisciplina;
+        return idDisciplinaAl;
     }
-    public void setId(int idDisciplina) {
-        this.idDisciplina = idDisciplina;
+    public void setId(int idDisciplinaAl) {
+        this.idDisciplinaAl = idDisciplinaAl;
     }
     public int getIdAluno() {
         return idAluno;
