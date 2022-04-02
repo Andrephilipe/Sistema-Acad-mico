@@ -1,6 +1,15 @@
-package acc.br.cadastro.controller;
-import java.util.List;
+/*******************************************
+ * Autor : André Philipe
+ * Data criacao: 26/03/2022
+ * Nome do arquivo: Classe Controller
+ * Arquivo de controle da aplicacao
+ *******************************************/
 
+ /****Pacote da classe****/
+package acc.br.cadastro.controller;
+
+//INICIO: Imports da classe
+import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -8,7 +17,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
-
 import acc.br.cadastro.model.Pessoa;
 import acc.br.cadastro.model.Turma;
 import acc.br.cadastro.model.Aluno;
@@ -17,10 +25,9 @@ import acc.br.cadastro.services.DisciplinaService;
 import acc.br.cadastro.services.PessoaService;
 import acc.br.cadastro.services.AlunoService;
 import acc.br.cadastro.services.TurmaService;
+//FIM: Imports da classe
 
-
-
-//Criando o rest controller
+/**INICIO: rest controller**/
 @RestController
 public class CadastroController {
     
@@ -33,29 +40,31 @@ public class CadastroController {
     @Autowired
     TurmaService turmaService;
 
-    @GetMapping("/cadastro")
+    @GetMapping("/pessoa")
     private List<Pessoa> getAllPessoa()
     {
         return pessoaService.getAllPessoa();
     }
 
-    @GetMapping("/cadastro/{id}")
-    private Pessoa getStudent(@PathVariable("id") int id)
+    @GetMapping("/pessoa/{idPessoa}")
+    private Pessoa getPessoa(@PathVariable("idPessoa") int idPessoa)
     {
-        return pessoaService.getStudentById(id);
+        return pessoaService.getPessoaById(idPessoa);
     }
 
-    @DeleteMapping("/cadastro/{id}")
-    private void deleteStudent(@PathVariable("id") int id)
+    @DeleteMapping("/pessoa/{idPessoa}")
+    private void deletePessoa(@PathVariable("idPessoa") int idPessoa)
     {
-        pessoaService.delete(id);
+        pessoaService.delete(idPessoa);
+        System.out.println("Pessoa deletada com sucesso.");
+
     }
 
-    @PostMapping("/cadastro")
+    @PostMapping("/pessoa")
     private int savePessoa(@RequestBody Pessoa pessoa)
     {
         pessoaService.saveOrUpdate(pessoa);
-        return pessoa.getId();
+        return pessoa.getIdPessoa();
     }
 
     //ANOTACAO DISCIPLINA
@@ -74,12 +83,15 @@ public class CadastroController {
     private void deleteDisciplina(@PathVariable("idDisciplina") int idDisciplina)
     {
         disciplinaService.delete(idDisciplina);
+        System.out.println("Disciplina deletada com sucesso.");
+
     }
     @GetMapping("/disciplina/{idDisciplina}")
     private Disciplina getDisciplina(@PathVariable("idDisciplina") int idDisciplina)
     {
         return disciplinaService.getDisciplinaById(idDisciplina);
     }
+
     //ANOTACAO ALUNO
     @GetMapping("/aluno")
     private List<Aluno> getAllAluno()
@@ -101,7 +113,9 @@ public class CadastroController {
     private void deleteAluno(@PathVariable("idAluno") int idAluno)
     {
         alunoService.delete(idAluno);
+        System.out.println("Aluno deletado com sucesso.");
     }
+
        //ANOTACAO TURMA
        @GetMapping("/turma")
        private List<Turma> getAllTurma()
@@ -111,17 +125,18 @@ public class CadastroController {
        @PostMapping("/turma")
        private int saveAluno(@RequestBody Turma turma)
        {
-                turmaService.saveOrUpdate(turma);
-           return turma.getIdTurma();
+            turmaService.saveOrUpdate(turma);
+            return turma.getIdTurma();
        }
        @GetMapping("/turma/{idTurma}")
        private Turma getTurma(@PathVariable("idTurma") int id)
        {
            return turmaService.getById(id);
        }
-       @DeleteMapping("/aluno/{idTurma}")
+       @DeleteMapping("/turma/{idTurma}")
        private void deleteTurma(@PathVariable("idTurma") int idTurma)
        {
             turmaService.delete(idTurma);
+            System.out.println("Turma deletada com sucesso.");
        }
 }

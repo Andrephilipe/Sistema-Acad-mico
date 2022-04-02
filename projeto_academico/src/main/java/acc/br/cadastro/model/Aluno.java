@@ -29,6 +29,13 @@ public class Aluno{
     public int idAluno;
     private int mensalidade_VL_mensalidade;
     private String tipo;
+    private String turmaId;
+    public String getTurmaId() {
+        return turmaId;
+    }
+    public void setTurmaId(String turmaId) {
+        this.turmaId = turmaId;
+    }
     private enum tipoAluno{
         ALUNO, ALUNOBOLSISTA
     }
@@ -78,11 +85,11 @@ public class Aluno{
     }
 
     //teste tipo bolsa
-    public String getTipo() {
+   public String getTipo() {
         return tipo;
-    }
+   }
     public void setTipo(String tipo) {
-        this.tipo = tipo;
+       this.tipo = tipo;
     }
 
 }

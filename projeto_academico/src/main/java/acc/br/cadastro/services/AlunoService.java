@@ -23,9 +23,9 @@ public class AlunoService {
         return alunos;
     }
 
-    public Aluno getStudentById(Integer id)
+    public Aluno getAlunoById(Integer idAluno)
     {
-        return alunoRepository.findById(id).get();
+        return alunoRepository.findById(idAluno).get();
     }
 
     public void saveOrUpdate(Aluno aluno)
@@ -33,15 +33,15 @@ public class AlunoService {
         alunoRepository.save(aluno);
     }
 
-    public void delete(Integer id)
+    public void delete(Integer idAluno)
     {
-        alunoRepository.deleteById(id);
+        alunoRepository.deleteById(idAluno);
     }
 
 	public void save(Aluno alunos) {
 	}
 
-    public Aluno getById(int id) {
+    public Aluno getById(int idAluno) {
         return null;
     }
 
