@@ -8,6 +8,8 @@
 /****Pacote da classe****/
 package acc.br.cadastro.model;
 
+import java.lang.reflect.Executable;
+
 //INICIO: Imports da classe
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -15,8 +17,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
-
-import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 //FIM: Imports da classe
 
@@ -45,16 +45,16 @@ public class Pessoa {
     private String pessoaSexo;
 
     @Column(name = "PessoaTipo")
-    private String tipo;
+    private String pessoaTipo;
 
     @Column(name = "Turma_idTurma")
-    public int Turma_idTurma;
+    public int turma_idTurma;
 
     /*INICIO: GETRS E SETS IDpessoa*/ 
-    public Integer getId() {
+    public Integer getIdPessoa() {
         return idPessoa;
     }
-    public void setId(Integer idPessoa) {
+    public void setIdPessoa(Integer idPessoa) {
         this.idPessoa = idPessoa;
     }
     /*FIM: GETRS E SETS IDpessoa*/ 
@@ -121,31 +121,23 @@ public class Pessoa {
     }
     /*FIM: GETRS E SETS PESSOASexo*/ 
 
-    /*INICIO: GETRS E SETS PessoaTipo*/ 
-    
-    private enum pessoaTipoA{
-        ALUNO, ALUNOBOLSISTA
+    /*INICIO: Getters and Setters PessoaTipo*/ 
+    public String getPessoaTipo() {
+        return pessoaTipo;
     }
-
-    public String getTipo() {
-        return tipo;
-    }
-    public void setTipo(String tipo) throws Exception {
-        this.tipo = tipo;
-        String alunoB = "ALUNO";//new ObjectMapper().writeValueAsString(pessoaTipoA.ALUNOBOLSISTA);
-        String alunoNb = "ALUNOBOLSISTA";//new ObjectMapper().writeValueAsString(pessoaTipoA.ALUNO);
-        System.out.println(alunoB);
-        System.out.println(alunoNb);
-        System.out.println(tipo);
-        if(tipo == "" || tipo == null){
+    public void setPessoaTipo(String pessoaTipo) throws Exception {
+        this.pessoaTipo = pessoaTipo;
+        String alunoB = "ALUNO";
+        String alunoNb = "ALUNOBOLSISTA";
+        if(pessoaTipo == "" || pessoaTipo == null){
 
             throw new Exception("O campo tipo é obrigatorio.");
             //sthis.tipo = new ObjectMapper().writeValueAsString(pessoaTipoA.ALUNO);
         }
-        else if(tipo.equals(alunoB) || tipo.equals(alunoNb) == true)
+        else if(pessoaTipo.equals(alunoB) || pessoaTipo.equals(alunoNb) == true)
         {
-            System.out.println(tipo);
-            this.tipo = tipo;
+            System.out.println(pessoaTipo);
+            this.pessoaTipo = pessoaTipo;
         }
         else
         {
@@ -158,6 +150,7 @@ public class Pessoa {
     /*INICIO: GETRS E SETS PESSOACPF*/ 
     public String getCpf() {
         return cpf;
+
     }
     public void setCpf(String cpf) throws Exception {
 
@@ -177,10 +170,11 @@ public class Pessoa {
 
     /*INICIO: GETRS E SETS Turma_idTurma*/ 
     public int getTurma_idTurma() {
-        return Turma_idTurma;
+        return turma_idTurma;
     }
     public void setidTurma(int turma_idTurma) {
-        this.Turma_idTurma = turma_idTurma;
+        this.turma_idTurma = turma_idTurma;
     }
     /*FIM: GETRS E SETS Turma_idTurma*/ 
+
 }

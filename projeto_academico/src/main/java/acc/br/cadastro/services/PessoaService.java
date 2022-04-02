@@ -22,7 +22,7 @@ public class PessoaService {
         return pessoas;
     }
 
-    public Pessoa getStudentById(Integer idPessoa)
+    public Pessoa getPessoaById(Integer idPessoa)
     {
         return pessoaRepository.findById(idPessoa).get();
     }
