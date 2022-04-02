@@ -90,17 +90,17 @@ public class CadastroController {
     private int saveAluno(@RequestBody Aluno aluno)
     {
         alunoService.saveOrUpdate(aluno);
-        return aluno.getId();
+        return aluno.getIdAluno();
     }
-    @GetMapping("/aluno/{idPessoa}")
-    private Aluno getAluno(@PathVariable("idPessoa") int id)
+    @GetMapping("/aluno/{idAluno}")
+    private Aluno getAluno(@PathVariable("idAluno") int id)
     {
         return alunoService.getById(id);
     }
-    @DeleteMapping("/aluno/{idPessoa}")
-    private void deleteAluno(@PathVariable("idPessoa") int idPessoa)
+    @DeleteMapping("/aluno/{idAluno}")
+    private void deleteAluno(@PathVariable("idAluno") int idAluno)
     {
-        alunoService.delete(idPessoa);
+        alunoService.delete(idAluno);
     }
        //ANOTACAO TURMA
        @GetMapping("/turma")
