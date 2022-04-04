@@ -11,8 +11,6 @@ package acc.br.cadastro.model;
 /***INICIO: Imports da classe***/
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 /***FIM: Imports da classe***/
@@ -23,11 +21,7 @@ public class DisciplinaAluno {
     
     @Id
     @Column(name = "idDisciplinaAl")
-    @GeneratedValue(strategy=GenerationType.SEQUENCE, generator="ID_DIS_SEQ")
     private int idDisciplinaAl;
-
-    @Column(name = "Aluno_IDPessoa")
-    private int idPessoa;
 
     @Column(name = "Aluno_IDAlunos")
     private int idAluno;
@@ -50,7 +44,7 @@ public class DisciplinaAluno {
     }
     /*FIM: GETRS E SETS idAluno*/
 
-    /*INICIO: GETRS E SETS idPessoa*/ 
+    /*INICIO: GETRS E SETS idPessoa
     public int getIdPessoa() {
         return idPessoa;
     }

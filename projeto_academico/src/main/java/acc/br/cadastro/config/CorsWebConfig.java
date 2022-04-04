@@ -1,3 +1,10 @@
+/**************************************************************************
+ * Autor : André Philipe
+ * Data criacao: 04/04/2022
+ * Nome do arquivo: CorsWebConfig
+ * Arquivo config da aplicacao
+ ****************************************************************************/
+
 package acc.br.cadastro.config;
 
 import javax.servlet.Filter;

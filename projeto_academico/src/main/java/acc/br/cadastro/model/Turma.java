@@ -53,5 +53,7 @@ public class Turma implements Serializable{
             this.turmaDesc = "não identificado";
         }
     }
+    public void adicionar(Aluno idAluno, Disciplina iDisciplina, Turma idTurma2) {
+    }
     
 }
