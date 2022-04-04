@@ -22,18 +22,18 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 @Entity
 @Table(name = "ALUNO")
-public class Aluno{
+public class Aluno {
     @Id
     @GeneratedValue(strategy=GenerationType.SEQUENCE, generator="aluno_sequence")
     @Column(name="idAluno")
     public int idAluno;
     private int mensalidade_VL_mensalidade;
     private String tipo;
-    private String turmaId;
-    public String getTurmaId() {
+    private int turmaId;
+    public int getTurmaId() {
         return turmaId;
     }
-    public void setTurmaId(String turmaId) {
+    public void setTurmaId(int turmaId) {
         this.turmaId = turmaId;
     }
     private enum tipoAluno{
