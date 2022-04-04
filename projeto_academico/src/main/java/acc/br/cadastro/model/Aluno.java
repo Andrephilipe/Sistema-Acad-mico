@@ -22,13 +22,20 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 @Entity
 @Table(name = "ALUNO")
-public class Aluno{
+public class Aluno {
     @Id
     @GeneratedValue(strategy=GenerationType.SEQUENCE, generator="aluno_sequence")
     @Column(name="idAluno")
     public int idAluno;
     private int mensalidade_VL_mensalidade;
     private String tipo;
+    private int turmaId;
+    public int getTurmaId() {
+        return turmaId;
+    }
+    public void setTurmaId(int turmaId) {
+        this.turmaId = turmaId;
+    }
     private enum tipoAluno{
         ALUNO, ALUNOBOLSISTA
     }
@@ -78,11 +85,11 @@ public class Aluno{
     }
 
     //teste tipo bolsa
-    public String getTipo() {
+   public String getTipo() {
         return tipo;
-    }
+   }
     public void setTipo(String tipo) {
-        this.tipo = tipo;
+       this.tipo = tipo;
     }
 
 }

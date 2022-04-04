@@ -31,6 +31,7 @@ public class TurmaService {
         public void saveOrUpdate(Turma turma)
         {
             turmaRepository.save(turma);
+            System.out.println("Turma");
         }
     
         public void delete(Integer id)

@@ -1,6 +1,14 @@
+/*******************************************
+ * Autor : André Philipe
+ * Data criacao: 26/03/2022
+ * Nome do arquivo: Classe Turma
+ * Arquivo de implementacao da classe Turma
+ *******************************************/
+
+/****Pacote da classe****/
 package acc.br.cadastro.model;
 
-
+//INICIO: Imports da classe
 import java.io.Serializable;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -8,6 +16,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+//FIM: Imports da classe
 
 @Entity
 @Table
@@ -31,7 +40,7 @@ public class Turma implements Serializable{
     public void setTurmaDesc(String turmaDesc) {
 
         String MI1 = "MI1 – Manha Iniciante 1";
-        String TI1 = "TI1 -  Tarde iniciante 1";
+        String TI1 = "TI1 - Tarde iniciante 1";
         String NI1 = "NI1 – Noite iniciante 1";
         this.turmaDesc = turmaDesc;
 
@@ -43,6 +52,8 @@ public class Turma implements Serializable{
         {
             this.turmaDesc = "não identificado";
         }
+    }
+    public void adicionar(Aluno idAluno, Disciplina iDisciplina, Turma idTurma2) {
     }
     
 }
