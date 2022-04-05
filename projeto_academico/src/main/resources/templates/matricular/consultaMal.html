@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+	  <link rel="stylesheet" href="../estilo.css">
+
+	</head>
+	<body ng-app="myApp">
+		<h1>Consultar alunos matriculados: </h1>
+		<nav id="menu">
+			<ul>
+				<li><a href="matricularAluno.html">Voltar</a></li>
+				<li><a href="../SistemaAcademico.html">Home</a></li>
+			</ul><br/>
+		</nav>
+
+		<div ng-controller="myController">
+			<input type="button" value="Consultar matriculados" ng-click="getPessoas()" />
+			<br />				
+			<br />
+			
+			Response Data: {{dados}}<br /> <br />
+					Error: {{error}}
+		</div>
+		<script>
+		    var myApp = angular.module('myApp', []);
+	   	
+			myApp.controller("myController", function ($scope, $http) {
+				var onSuccess = function successCallback(response) {$scope.dados = response.data;}
+
+				var onError = function errorCallback(response) {$scope.error = response;}
+			
+			    var getReq = {
+						method  : 'GET',
+						url     : 'http://localhost:8080/matriculaAluno'
+					};
+							
+				$scope.getPessoas = function () {
+					$http(getReq).then(onSuccess, onError);
+				};
+
+			});
+		</script>
+
+	</body>
+</html>
