@@ -8,8 +8,6 @@
 /****Pacote da classe****/
 package acc.br.cadastro.model;
 
-import java.io.Serializable;
-
 //INICIO: Imports da classe
 import javax.persistence.Column;
 import javax.persistence.Entity;
