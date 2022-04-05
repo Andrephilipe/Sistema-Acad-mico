@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+	  <link rel="stylesheet" href="../estilo.css">
+
+	</head>
+	<body ng-app="myApp">
+		<h1>Cadastro de disciplina: </h1>
+		<div ng-controller="myController">
+			<nav id="menu">
+				<ul>
+					<li><a href="cadastrardisciplina.html">Cadastrar disciplina</a></li>
+					<li><a href="consultardisciplina.html">Consultar disciplina</a></li>
+					<li><a href="deletardisciplina.html">Deletar disciplina</a></li>
+					<li><a href="modificarDisciplina.html">Modificar disciplina</a></li>
+					<li><a href="../SistemaAcademico.html">Home</a></li>
+				</ul>
+			</nav>
+			<br/><br/>
+		</div>
+		<script>
+		    var myApp = angular.module('myApp', []);
+	   	
+			myApp.controller("myController", function ($scope, $http) {
+				var onSuccess = function successCallback(response) {$scope.dados = response.data;}
+
+				var onError = function errorCallback(response) {$scope.error = response;}
+			
+				var postReq = {
+						method: 'POST',
+						url   : 'http://localhost:8080/disciplina',
+						data  :	{
+									idDisciplina: "",
+									nomeDisc: "Programação",
+									discCredt: 5
+
+								}   
+					};
+			
+				$scope.postPessoas = function () {
+					$http(postReq).then(onSuccess, onError);
+				};
+
+			});
+		</script>
+
+	</body>
+</html>
