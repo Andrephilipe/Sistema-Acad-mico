@@ -150,7 +150,6 @@ public class Pessoa {
     /*INICIO: GETRS E SETS PESSOACPF*/ 
     public String getCpf() {
         return cpf;
-
     }
     public void setCpf(String cpf) throws Exception {
 

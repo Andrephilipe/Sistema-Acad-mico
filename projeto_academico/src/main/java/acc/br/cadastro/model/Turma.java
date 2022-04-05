@@ -53,7 +53,18 @@ public class Turma implements Serializable{
             this.turmaDesc = "não identificado";
         }
     }
-    public void adicionar(Aluno idAluno, Disciplina iDisciplina, Turma idTurma2) {
+
+    @Column
+    private int qtTurma;
+
+    public int getQtTurma() {
+        return qtTurma;
+    }
+
+
+    public void setQtTurma(int qtTurma) {
+
+        this.qtTurma ++;
     }
     
 }
