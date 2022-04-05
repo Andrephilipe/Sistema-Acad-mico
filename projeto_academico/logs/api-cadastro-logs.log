@@ -248,3 +248,46 @@
 2022-04-05 14:15:02,682 INFO acc.br.cadastro.CadastroAcademico [restartedMain] Started CadastroAcademico in 20.243 seconds (JVM running for 19478.349)
 2022-04-05 14:15:02,684 INFO org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener [restartedMain] Condition evaluation unchanged
 2022-04-05 14:15:02,684 INFO acc.br.cadastro.CadastroAcademico [restartedMain] Cadastro academico iniciada e pronta para uso.
+2022-04-05 14:26:01,210 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [Thread-23] Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-04-05 14:26:01,211 INFO com.zaxxer.hikari.HikariDataSource [Thread-23] HikariPool-6 - Shutdown initiated...
+2022-04-05 14:26:01,225 INFO com.zaxxer.hikari.HikariDataSource [Thread-23] HikariPool-6 - Shutdown completed.
+2022-04-05 14:26:01,371 INFO acc.br.cadastro.CadastroAcademico [restartedMain] Inicio cadastro academico.
+2022-04-05 14:26:01,519 INFO acc.br.cadastro.CadastroAcademico [restartedMain] Starting CadastroAcademico using Java 17.0.2 on CPX-R3Q0SB8SNR6 with PID 11220 (C:\Users\andre.p.cassiano\Java - Estudos da linguagem\JAVA-SPRING-BOOT---TURMA-1-\SEF - Participants Workspace\Sistema-Academico\projeto_academico\target\classes started by andre.p.cassiano in C:\Users\andre.p.cassiano\Java - Estudos da linguagem\JAVA-SPRING-BOOT---TURMA-1-\SEF - Participants Workspace\Sistema-Academico\projeto_academico)
+2022-04-05 14:26:01,520 DEBUG acc.br.cadastro.CadastroAcademico [restartedMain] Running with Spring Boot v2.6.3, Spring v5.3.15
+2022-04-05 14:26:01,520 INFO acc.br.cadastro.CadastroAcademico [restartedMain] No active profile set, falling back to default profiles: default
+2022-04-05 14:26:02,601 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-04-05 14:26:02,678 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 77 ms. Found 6 JPA repository interfaces.
+2022-04-05 14:26:03,041 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8080 (http)
+2022-04-05 14:26:03,042 INFO org.apache.coyote.http11.Http11NioProtocol [restartedMain] Initializing ProtocolHandler ["http-nio-8080"]
+2022-04-05 14:26:03,043 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2022-04-05 14:26:03,043 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-04-05 14:26:03,127 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [restartedMain] Initializing Spring embedded WebApplicationContext
+2022-04-05 14:26:03,127 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 1599 ms
+2022-04-05 14:26:03,202 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-7 - Starting...
+2022-04-05 14:26:03,212 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-7 - Start completed.
+2022-04-05 14:26:03,229 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-04-05 14:26:03,246 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-04-05 14:26:03,410 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-04-05 14:26:03,411 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-04-05 14:26:03,697 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-04-05 14:26:03,846 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2022-04-05 14:26:03,857 INFO org.apache.coyote.http11.Http11NioProtocol [restartedMain] Starting ProtocolHandler ["http-nio-8080"]
+2022-04-05 14:26:03,864 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8080 (http) with context path ''
+2022-04-05 14:26:03,869 INFO acc.br.cadastro.CadastroAcademico [restartedMain] Started CadastroAcademico in 2.48 seconds (JVM running for 20139.536)
+2022-04-05 14:26:03,878 INFO org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener [restartedMain] Condition evaluation unchanged
+2022-04-05 14:26:03,878 INFO acc.br.cadastro.CadastroAcademico [restartedMain] Cadastro academico iniciada e pronta para uso.
+2022-04-05 14:26:42,315 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-04-05 14:26:42,316 INFO org.springframework.web.servlet.DispatcherServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2022-04-05 14:26:42,317 INFO org.springframework.web.servlet.DispatcherServlet [http-nio-8080-exec-1] Completed initialization in 1 ms
+2022-04-05 14:26:43,054 WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-2] SQL Error: 1452, SQLState: 23000
+2022-04-05 14:26:43,055 ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-2] Cannot add or update a child row: a foreign key constraint fails (`cadastro`.`pessoa`, CONSTRAINT `id_turma` FOREIGN KEY (`Turma_idTurma`) REFERENCES `turma` (`idTurma`))
+2022-04-05 14:26:43,074 INFO org.hibernate.engine.jdbc.batch.internal.AbstractBatchImpl [http-nio-8080-exec-2] HHH000010: On release of batch it still contained JDBC statements
+2022-04-05 14:26:45,036 WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-4] SQL Error: 1452, SQLState: 23000
+2022-04-05 14:26:45,037 ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-4] Cannot add or update a child row: a foreign key constraint fails (`cadastro`.`pessoa`, CONSTRAINT `id_turma` FOREIGN KEY (`Turma_idTurma`) REFERENCES `turma` (`idTurma`))
+2022-04-05 14:26:45,037 INFO org.hibernate.engine.jdbc.batch.internal.AbstractBatchImpl [http-nio-8080-exec-4] HHH000010: On release of batch it still contained JDBC statements
+2022-04-05 14:26:45,963 WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-6] SQL Error: 1452, SQLState: 23000
+2022-04-05 14:26:45,964 ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-6] Cannot add or update a child row: a foreign key constraint fails (`cadastro`.`pessoa`, CONSTRAINT `id_turma` FOREIGN KEY (`Turma_idTurma`) REFERENCES `turma` (`idTurma`))
+2022-04-05 14:26:45,964 INFO org.hibernate.engine.jdbc.batch.internal.AbstractBatchImpl [http-nio-8080-exec-6] HHH000010: On release of batch it still contained JDBC statements
+2022-04-05 14:47:56,141 WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-4] SQL Error: 1452, SQLState: 23000
+2022-04-05 14:47:56,141 ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-4] Cannot add or update a child row: a foreign key constraint fails (`cadastro`.`pessoa`, CONSTRAINT `id_turma` FOREIGN KEY (`Turma_idTurma`) REFERENCES `turma` (`idTurma`))
+2022-04-05 14:47:56,142 INFO org.hibernate.engine.jdbc.batch.internal.AbstractBatchImpl [http-nio-8080-exec-4] HHH000010: On release of batch it still contained JDBC statements
