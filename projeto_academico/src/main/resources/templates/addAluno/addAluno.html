@@ -3,25 +3,21 @@
 	<head>
 	  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
 	  <link rel="stylesheet" href="../estilo.css">
+
 	</head>
 	<body ng-app="myApp">
-		<h1>Matricular Aluno: </h1>
+		<h1>Cadastro de aluno: </h1>
 		<div ng-controller="myController">
 			<nav id="menu">
 				<ul>
-                    <li><a href="../SistemaAcademico.html">Voltar</a></li>
-                    <li><a href="consultaMal.html">Consultar alunos matriculados</a></li>
+					<li><a href="cadastraraluno.html">Cadastrar aluno</a></li>
+					<li><a href="consultaraluno.html">Consultar aluno</a></li>
+					<li><a href="deletaraluno.html">Deletar aluno</a></li>
+					<li><a href="modificaraluno.html">Modificar aluno</a></li>
+					<li><a href="../SistemaAcademico.html">Home</a></li>
 				</ul>
 			</nav>
 			<br/><br/>
-            <div ng-controller="myController">
-                <input type="button" value="Matricular Aluno." ng-click="postMatricular()" />
-                <br />				
-                <br />
-                
-                Response Data: {{dados}}<br /> <br />
-                        Error: {{error}}
-            </div>
 		</div>
 		<script>
 		    var myApp = angular.module('myApp', []);
@@ -33,17 +29,18 @@
 			
 				var postReq = {
 						method: 'POST',
-						url   : 'http://localhost:8080/matriculaAluno',
+						url   : 'http://localhost:8080/pessoa',
 						data  :	{
-									idMatricula: "",
-									idAlunoM: "1",
-									turmaM: "1",
-									discId: "1"
+									idPessoa: "",
+									pessoaNome: "André Paulo Silva",
+									cpf: "1255112255",
+									pessoaTipo: "ALUNOBOLSISTA",
+									pessoaSexo: "MASCULINO"
 
 								}   
 					};
 			
-				$scope.postMatricular = function () {
+				$scope.postPessoas = function () {
 					$http(postReq).then(onSuccess, onError);
 				};
 
