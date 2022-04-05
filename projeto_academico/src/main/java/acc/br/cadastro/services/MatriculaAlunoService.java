@@ -3,8 +3,6 @@ import java.util.*;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import acc.br.cadastro.model.Aluno;
 import acc.br.cadastro.model.MatriculaAluno;
 import acc.br.cadastro.repository.MatricularRepository;
 
@@ -14,7 +12,6 @@ public class MatriculaAlunoService {
     
     @Autowired
     MatricularRepository matricularRepository;
-
 
     public List<MatriculaAluno> getAllMatriculaAluno()
     {

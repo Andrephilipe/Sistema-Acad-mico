@@ -19,8 +19,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 import acc.br.cadastro.model.Pessoa;
 import acc.br.cadastro.model.Turma;
-import acc.br.cadastro.repository.MatricularRepository;
 import acc.br.cadastro.model.Aluno;
+//import acc.br.cadastro.repository.MatricularRepository;
+//import acc.br.cadastro.model.Aluno;
 import acc.br.cadastro.model.Disciplina;
 import acc.br.cadastro.model.MatriculaAluno;
 import acc.br.cadastro.services.DisciplinaService;
@@ -147,26 +148,26 @@ public class CadastroController {
 
 
              //ANOTACAO TURMA MatricularRepository matricularRepository;
-             @GetMapping("/matricula")
+             @GetMapping("/matriculaAluno")
              private List<MatriculaAluno> getAllMatriculaAluno()
              {
                  return matriculaAlunoService.getAllMatriculaAluno();
              }
-             @PostMapping("/matricula")
+             @PostMapping("/matriculaAluno")
              private int saveAluno(@RequestBody MatriculaAluno matriculaAluno)
              {
                 matriculaAlunoService.saveOrUpdate(matriculaAluno);
                   return matriculaAluno.getIdMatricula();
              }
-             @GetMapping("/matricula/{idMatricula}")
+             @GetMapping("/matriculaAluno/{idMatricula}")
              private MatriculaAluno getMatriculaById(@PathVariable("idMatricula") int id)
              {
                  return matriculaAlunoService.getById(id);
              }
-             @DeleteMapping("/matricula/{idMatricula}")
+             @DeleteMapping("/matriculaAluno/{idMatricula}")
              private void deleteMatricula(@PathVariable("idMatricula") int idMatricula)
              {
                 matriculaAlunoService.delete(idMatricula);
-                  System.out.println("Turma deletada com sucesso.");
+                  System.out.println("Aluno desmatriculado da turma");
              }
 }

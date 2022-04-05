@@ -8,7 +8,7 @@ import org.slf4j.LoggerFactory;
 @SpringBootApplication
 public class CadastroAcademico {
 
-	private static Logger logger = LoggerFactory.getLogger(CadastroAcademico.class);
+	public static Logger logger = LoggerFactory.getLogger(CadastroAcademico.class);
 	public static void main(String[] args) {
 		logger.info("Inicio cadastro academico.");
 		SpringApplication.run(CadastroAcademico.class, args);

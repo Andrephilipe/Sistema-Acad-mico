@@ -1,10 +1,10 @@
 <configuration>
-    <property name="LOG_DIR" value="logs/api-logs.log"/>
+    <property name="LOG_DIR" value="logs/api-cadastro-logs.log"/>
         <appender name="FILE-ROLLING" class="ch.qos.logback.core.rolling.RollingFileAppender">
             <file>${LOG_DIR}</file>
             <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
-                <fileNamePattern>logs/archived/api-logs.%d{yyyy-MM-dd}.%i.log.gz</fileNamePattern>
-                <maxFileSize>5MB</maxFileSize>
+                <fileNamePattern>logs/logsarquivados/api-logs.%d{yyyy-MM-dd}.%i.log.gz</fileNamePattern>
+                <maxFileSize>100kb</maxFileSize>
                 <totalSizeCap>1GB</totalSizeCap>
                 <maxHistory>60</maxHistory>
             </rollingPolicy>
