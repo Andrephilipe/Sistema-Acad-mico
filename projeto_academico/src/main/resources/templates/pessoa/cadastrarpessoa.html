@@ -2,10 +2,16 @@
 <html>
 	<head>
 	  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+	  <link rel="stylesheet" href="../estilo.css">
 	</head>
 	<body ng-app="myApp">
 		<h1>Cadastro de pessoas: </h1>
-
+		<nav id="menu">
+			<ul>
+				<li><a href="cadastro.html">Voltar</a></li>
+				<li><a href="../SistemaAcademico.html">Home</a></li>
+			</ul><br/>
+		</nav>
 		<div ng-controller="myController">
 			<input type="button" value="Inserir pessoas" ng-click="postPessoas()" />
 			<br />				

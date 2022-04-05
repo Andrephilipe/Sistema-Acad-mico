@@ -2,18 +2,29 @@
 <html>
 	<head>
 	  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+	  <link rel="stylesheet" href="../estilo.css">
+
 	</head>
 	<body ng-app="myApp">
-		<h1>AngularJS Front-End: </h1>
-
+		<h1>Deletar pessoas: </h1>
+		<nav id="menu">
+			<ul>
+				<li><a href="cadastro.html">Voltar</a></li>
+				<li><a href="../SistemaAcademico.html">Home</a></li>
+			</ul><br/>
+		</nav>
 		<div ng-controller="myController">
-			<input type="button" value="Pegar dados cadastro de pessoas" ng-click="getPessoas()" />
+            <form>
+			    <input type="submit" value="Deletar pessoa" ng-click="getPessoas()" />
+                <br/><br/>
+                Response Data: {{dados}}<br /> <br />
+                Error: {{error}}
 			<br />				
 			<br />
-			Response Data: </div><br/>{{dados[0].id}} {{dados[0].cpf}} {{dados[0].nome}}{{dados[0].sexo}}<br /> <br />
-					Error: {{error}}
+        </form>
 		</div>
 		<script>
+
 		    var myApp = angular.module('myApp', []);
 	   	
 			myApp.controller("myController", function ($scope, $http) {
@@ -22,8 +33,8 @@
 				var onError = function errorCallback(response) {$scope.error = response;}
 			
 			    var getReq = {
-						method  : 'GET',
-						url     : 'http://localhost:8080/cadastro'
+						method  : 'DELETE',
+						url     : 'http://localhost:8080/pessoa/64'
 					};
 							
 				$scope.getPessoas = function () {
