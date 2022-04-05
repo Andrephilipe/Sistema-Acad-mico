@@ -498,3 +498,4 @@ Caused by: java.lang.Error: Unresolved compilation problems:
 2022-04-04 21:44:52,256 WARN org.springframework.web.servlet.PageNotFound [http-nio-8080-exec-2] No mapping for POST /cadastro
 2022-04-04 21:45:13,627 WARN org.springframework.web.servlet.PageNotFound [http-nio-8080-exec-7] No mapping for GET /student
 2022-04-04 21:55:25,035 WARN org.springframework.web.servlet.PageNotFound [http-nio-8080-exec-6] No mapping for GET /cadastro
+2022-04-04 21:55:25,406 WARN org.springframework.web.servlet.PageNotFound [http-nio-8080-exec-7] No mapping for GET /favicon.ico
