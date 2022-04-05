@@ -2,6 +2,8 @@ package acc.br.cadastro.services;
 
 import java.util.List;
 import java.util.ArrayList;
+import java.util.Iterator;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import acc.br.cadastro.repository.TurmaRepository;
@@ -20,6 +22,7 @@ public class TurmaService {
             List<Turma> turmas = new ArrayList<Turma>();
             turmaRepository.findAll().forEach(turma -> turmas.add(turma));
             return turmas;
+
         }
     
         public Turma getTurmaById(Integer id)
@@ -27,11 +30,9 @@ public class TurmaService {
             return turmaRepository.findById(id).get();
         }
     
-
         public void saveOrUpdate(Turma turma)
         {
             turmaRepository.save(turma);
-            System.out.println("Turma");
         }
     
         public void delete(Integer id)
@@ -45,4 +46,5 @@ public class TurmaService {
         public Turma getById(int id) {
             return null;
         }
+
 }

@@ -19,10 +19,9 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 //FIM: Imports da classe
 
-
 @Entity
 @Table(name = "ALUNO")
-public class Aluno {
+public class Aluno{
     @Id
     @GeneratedValue(strategy=GenerationType.SEQUENCE, generator="aluno_sequence")
     @Column(name="idAluno")
@@ -83,7 +82,6 @@ public class Aluno {
         System.out.println("Fim case de mensalidades.");
 
     }
-
     //teste tipo bolsa
    public String getTipo() {
         return tipo;
