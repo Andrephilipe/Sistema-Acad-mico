@@ -98,3 +98,153 @@
 2022-04-05 10:56:36,827 WARN org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver [http-nio-8080-exec-8] Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'DELETE' not supported]
 2022-04-05 10:57:28,396 WARN org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver [http-nio-8080-exec-9] Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'DELETE' not supported]
 2022-04-05 10:58:38,638 WARN org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver [http-nio-8080-exec-3] Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'DELETE' not supported]
+2022-04-05 11:23:45,307 WARN org.springframework.web.servlet.PageNotFound [http-nio-8080-exec-3] No mapping for POST /matricularAluno
+2022-04-05 13:52:56,665 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [Thread-5] Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-04-05 13:52:56,678 INFO com.zaxxer.hikari.HikariDataSource [Thread-5] HikariPool-1 - Shutdown initiated...
+2022-04-05 13:52:56,687 INFO com.zaxxer.hikari.HikariDataSource [Thread-5] HikariPool-1 - Shutdown completed.
+2022-04-05 13:52:56,864 INFO acc.br.cadastro.CadastroAcademico [restartedMain] Inicio cadastro academico.
+2022-04-05 13:52:56,938 INFO acc.br.cadastro.CadastroAcademico [restartedMain] Starting CadastroAcademico using Java 17.0.2 on CPX-R3Q0SB8SNR6 with PID 11220 (C:\Users\andre.p.cassiano\Java - Estudos da linguagem\JAVA-SPRING-BOOT---TURMA-1-\SEF - Participants Workspace\Sistema-Academico\projeto_academico\target\classes started by andre.p.cassiano in C:\Users\andre.p.cassiano\Java - Estudos da linguagem\JAVA-SPRING-BOOT---TURMA-1-\SEF - Participants Workspace\Sistema-Academico\projeto_academico)
+2022-04-05 13:52:56,938 DEBUG acc.br.cadastro.CadastroAcademico [restartedMain] Running with Spring Boot v2.6.3, Spring v5.3.15
+2022-04-05 13:52:56,938 INFO acc.br.cadastro.CadastroAcademico [restartedMain] No active profile set, falling back to default profiles: default
+2022-04-05 13:52:57,550 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-04-05 13:52:57,595 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 45 ms. Found 6 JPA repository interfaces.
+2022-04-05 13:52:57,804 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8080 (http)
+2022-04-05 13:52:57,806 INFO org.apache.coyote.http11.Http11NioProtocol [restartedMain] Initializing ProtocolHandler ["http-nio-8080"]
+2022-04-05 13:52:57,806 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2022-04-05 13:52:57,807 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-04-05 13:52:57,893 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [restartedMain] Initializing Spring embedded WebApplicationContext
+2022-04-05 13:52:57,893 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 944 ms
+2022-04-05 13:52:57,992 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-04-05 13:52:58,009 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-2 - Starting...
+2022-04-05 13:52:58,015 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-2 - Start completed.
+2022-04-05 13:52:58,016 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-04-05 13:53:32,976 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-04-05 13:53:32,976 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-04-05 13:53:33,963 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-04-05 13:53:34,072 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2022-04-05 13:53:34,076 INFO org.apache.coyote.http11.Http11NioProtocol [restartedMain] Starting ProtocolHandler ["http-nio-8080"]
+2022-04-05 13:53:34,080 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8080 (http) with context path ''
+2022-04-05 13:53:34,084 INFO acc.br.cadastro.CadastroAcademico [restartedMain] Started CadastroAcademico in 37.208 seconds (JVM running for 18189.751)
+2022-04-05 13:53:34,087 INFO org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener [restartedMain] Condition evaluation unchanged
+2022-04-05 13:53:34,087 INFO acc.br.cadastro.CadastroAcademico [restartedMain] Cadastro academico iniciada e pronta para uso.
+2022-04-05 13:53:34,279 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-04-05 13:53:34,279 INFO org.springframework.web.servlet.DispatcherServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2022-04-05 13:53:34,282 INFO org.springframework.web.servlet.DispatcherServlet [http-nio-8080-exec-1] Completed initialization in 3 ms
+2022-04-05 13:54:23,010 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [Thread-7] Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-04-05 13:54:23,011 INFO com.zaxxer.hikari.HikariDataSource [Thread-7] HikariPool-2 - Shutdown initiated...
+2022-04-05 13:54:23,013 INFO com.zaxxer.hikari.HikariDataSource [Thread-7] HikariPool-2 - Shutdown completed.
+2022-04-05 13:54:23,054 INFO acc.br.cadastro.CadastroAcademico [restartedMain] Inicio cadastro academico.
+2022-04-05 13:54:23,104 INFO acc.br.cadastro.CadastroAcademico [restartedMain] Starting CadastroAcademico using Java 17.0.2 on CPX-R3Q0SB8SNR6 with PID 11220 (C:\Users\andre.p.cassiano\Java - Estudos da linguagem\JAVA-SPRING-BOOT---TURMA-1-\SEF - Participants Workspace\Sistema-Academico\projeto_academico\target\classes started by andre.p.cassiano in C:\Users\andre.p.cassiano\Java - Estudos da linguagem\JAVA-SPRING-BOOT---TURMA-1-\SEF - Participants Workspace\Sistema-Academico\projeto_academico)
+2022-04-05 13:54:23,105 DEBUG acc.br.cadastro.CadastroAcademico [restartedMain] Running with Spring Boot v2.6.3, Spring v5.3.15
+2022-04-05 13:54:23,105 INFO acc.br.cadastro.CadastroAcademico [restartedMain] No active profile set, falling back to default profiles: default
+2022-04-05 13:54:23,423 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-04-05 13:54:23,462 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 38 ms. Found 6 JPA repository interfaces.
+2022-04-05 13:54:23,600 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8080 (http)
+2022-04-05 13:54:23,601 INFO org.apache.coyote.http11.Http11NioProtocol [restartedMain] Initializing ProtocolHandler ["http-nio-8080"]
+2022-04-05 13:54:23,601 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2022-04-05 13:54:23,601 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-04-05 13:54:23,656 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [restartedMain] Initializing Spring embedded WebApplicationContext
+2022-04-05 13:54:23,657 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 549 ms
+2022-04-05 13:54:23,707 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-3 - Starting...
+2022-04-05 13:54:23,713 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-3 - Start completed.
+2022-04-05 13:54:23,720 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-04-05 13:54:23,727 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-04-05 13:54:24,032 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-04-05 13:54:24,033 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-04-05 13:54:24,176 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-04-05 13:54:24,328 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2022-04-05 13:54:24,337 INFO org.apache.coyote.http11.Http11NioProtocol [restartedMain] Starting ProtocolHandler ["http-nio-8080"]
+2022-04-05 13:54:24,342 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8080 (http) with context path ''
+2022-04-05 13:54:24,348 INFO acc.br.cadastro.CadastroAcademico [restartedMain] Started CadastroAcademico in 1.288 seconds (JVM running for 18240.015)
+2022-04-05 13:54:24,349 INFO org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener [restartedMain] Condition evaluation unchanged
+2022-04-05 13:54:24,350 INFO acc.br.cadastro.CadastroAcademico [restartedMain] Cadastro academico iniciada e pronta para uso.
+2022-04-05 13:55:16,863 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-04-05 13:55:16,864 INFO org.springframework.web.servlet.DispatcherServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2022-04-05 13:55:16,864 INFO org.springframework.web.servlet.DispatcherServlet [http-nio-8080-exec-1] Completed initialization in 0 ms
+2022-04-05 13:56:49,795 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [Thread-11] Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-04-05 13:56:49,795 INFO com.zaxxer.hikari.HikariDataSource [Thread-11] HikariPool-3 - Shutdown initiated...
+2022-04-05 13:56:49,798 INFO com.zaxxer.hikari.HikariDataSource [Thread-11] HikariPool-3 - Shutdown completed.
+2022-04-05 13:56:49,835 INFO acc.br.cadastro.CadastroAcademico [restartedMain] Inicio cadastro academico.
+2022-04-05 13:56:49,875 INFO acc.br.cadastro.CadastroAcademico [restartedMain] Starting CadastroAcademico using Java 17.0.2 on CPX-R3Q0SB8SNR6 with PID 11220 (C:\Users\andre.p.cassiano\Java - Estudos da linguagem\JAVA-SPRING-BOOT---TURMA-1-\SEF - Participants Workspace\Sistema-Academico\projeto_academico\target\classes started by andre.p.cassiano in C:\Users\andre.p.cassiano\Java - Estudos da linguagem\JAVA-SPRING-BOOT---TURMA-1-\SEF - Participants Workspace\Sistema-Academico\projeto_academico)
+2022-04-05 13:56:49,875 DEBUG acc.br.cadastro.CadastroAcademico [restartedMain] Running with Spring Boot v2.6.3, Spring v5.3.15
+2022-04-05 13:56:49,875 INFO acc.br.cadastro.CadastroAcademico [restartedMain] No active profile set, falling back to default profiles: default
+2022-04-05 13:56:50,177 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-04-05 13:56:50,218 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 42 ms. Found 6 JPA repository interfaces.
+2022-04-05 13:56:50,366 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8080 (http)
+2022-04-05 13:56:50,367 INFO org.apache.coyote.http11.Http11NioProtocol [restartedMain] Initializing ProtocolHandler ["http-nio-8080"]
+2022-04-05 13:56:50,367 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2022-04-05 13:56:50,367 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-04-05 13:56:50,428 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [restartedMain] Initializing Spring embedded WebApplicationContext
+2022-04-05 13:56:50,428 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 550 ms
+2022-04-05 13:56:50,466 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-4 - Starting...
+2022-04-05 13:56:50,471 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-4 - Start completed.
+2022-04-05 13:56:50,481 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-04-05 13:56:50,498 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-04-05 13:56:50,634 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-04-05 13:56:50,635 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-04-05 13:56:50,822 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-04-05 13:56:51,004 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2022-04-05 13:56:51,012 INFO org.apache.coyote.http11.Http11NioProtocol [restartedMain] Starting ProtocolHandler ["http-nio-8080"]
+2022-04-05 13:56:51,018 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8080 (http) with context path ''
+2022-04-05 13:56:51,025 INFO acc.br.cadastro.CadastroAcademico [restartedMain] Started CadastroAcademico in 1.185 seconds (JVM running for 18386.692)
+2022-04-05 13:56:51,027 INFO org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener [restartedMain] Condition evaluation unchanged
+2022-04-05 13:56:51,027 INFO acc.br.cadastro.CadastroAcademico [restartedMain] Cadastro academico iniciada e pronta para uso.
+2022-04-05 13:57:02,213 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [Thread-15] Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-04-05 13:57:02,214 INFO com.zaxxer.hikari.HikariDataSource [Thread-15] HikariPool-4 - Shutdown initiated...
+2022-04-05 13:57:02,220 INFO com.zaxxer.hikari.HikariDataSource [Thread-15] HikariPool-4 - Shutdown completed.
+2022-04-05 13:57:02,299 INFO acc.br.cadastro.CadastroAcademico [restartedMain] Inicio cadastro academico.
+2022-04-05 13:57:02,383 INFO acc.br.cadastro.CadastroAcademico [restartedMain] Starting CadastroAcademico using Java 17.0.2 on CPX-R3Q0SB8SNR6 with PID 11220 (C:\Users\andre.p.cassiano\Java - Estudos da linguagem\JAVA-SPRING-BOOT---TURMA-1-\SEF - Participants Workspace\Sistema-Academico\projeto_academico\target\classes started by andre.p.cassiano in C:\Users\andre.p.cassiano\Java - Estudos da linguagem\JAVA-SPRING-BOOT---TURMA-1-\SEF - Participants Workspace\Sistema-Academico\projeto_academico)
+2022-04-05 13:57:02,384 DEBUG acc.br.cadastro.CadastroAcademico [restartedMain] Running with Spring Boot v2.6.3, Spring v5.3.15
+2022-04-05 13:57:02,384 INFO acc.br.cadastro.CadastroAcademico [restartedMain] No active profile set, falling back to default profiles: default
+2022-04-05 13:57:02,983 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-04-05 13:57:03,032 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 48 ms. Found 6 JPA repository interfaces.
+2022-04-05 13:57:03,172 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8080 (http)
+2022-04-05 13:57:03,172 INFO org.apache.coyote.http11.Http11NioProtocol [restartedMain] Initializing ProtocolHandler ["http-nio-8080"]
+2022-04-05 13:57:03,173 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2022-04-05 13:57:03,174 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-04-05 13:57:03,255 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [restartedMain] Initializing Spring embedded WebApplicationContext
+2022-04-05 13:57:03,255 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 868 ms
+2022-04-05 13:57:03,300 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-5 - Starting...
+2022-04-05 13:57:03,306 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-5 - Start completed.
+2022-04-05 13:57:03,319 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-04-05 13:57:03,332 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-04-05 13:57:03,433 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-04-05 13:57:03,434 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-04-05 13:57:03,585 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-04-05 13:57:03,701 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2022-04-05 13:57:03,708 INFO org.apache.coyote.http11.Http11NioProtocol [restartedMain] Starting ProtocolHandler ["http-nio-8080"]
+2022-04-05 13:57:03,719 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8080 (http) with context path ''
+2022-04-05 13:57:03,726 INFO acc.br.cadastro.CadastroAcademico [restartedMain] Started CadastroAcademico in 1.413 seconds (JVM running for 18399.392)
+2022-04-05 13:57:03,728 INFO org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener [restartedMain] Condition evaluation unchanged
+2022-04-05 13:57:03,728 INFO acc.br.cadastro.CadastroAcademico [restartedMain] Cadastro academico iniciada e pronta para uso.
+2022-04-05 14:11:18,430 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-04-05 14:11:18,430 INFO org.springframework.web.servlet.DispatcherServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2022-04-05 14:11:18,431 INFO org.springframework.web.servlet.DispatcherServlet [http-nio-8080-exec-1] Completed initialization in 1 ms
+2022-04-05 14:14:42,313 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [Thread-19] Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-04-05 14:14:42,315 INFO com.zaxxer.hikari.HikariDataSource [Thread-19] HikariPool-5 - Shutdown initiated...
+2022-04-05 14:14:42,319 INFO com.zaxxer.hikari.HikariDataSource [Thread-19] HikariPool-5 - Shutdown completed.
+2022-04-05 14:14:42,427 INFO acc.br.cadastro.CadastroAcademico [restartedMain] Inicio cadastro academico.
+2022-04-05 14:14:42,554 INFO acc.br.cadastro.CadastroAcademico [restartedMain] Starting CadastroAcademico using Java 17.0.2 on CPX-R3Q0SB8SNR6 with PID 11220 (C:\Users\andre.p.cassiano\Java - Estudos da linguagem\JAVA-SPRING-BOOT---TURMA-1-\SEF - Participants Workspace\Sistema-Academico\projeto_academico\target\classes started by andre.p.cassiano in C:\Users\andre.p.cassiano\Java - Estudos da linguagem\JAVA-SPRING-BOOT---TURMA-1-\SEF - Participants Workspace\Sistema-Academico\projeto_academico)
+2022-04-05 14:14:42,555 DEBUG acc.br.cadastro.CadastroAcademico [restartedMain] Running with Spring Boot v2.6.3, Spring v5.3.15
+2022-04-05 14:14:42,555 INFO acc.br.cadastro.CadastroAcademico [restartedMain] No active profile set, falling back to default profiles: default
+2022-04-05 14:14:43,354 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-04-05 14:14:43,416 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 58 ms. Found 6 JPA repository interfaces.
+2022-04-05 14:14:43,592 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8080 (http)
+2022-04-05 14:14:43,594 INFO org.apache.coyote.http11.Http11NioProtocol [restartedMain] Initializing ProtocolHandler ["http-nio-8080"]
+2022-04-05 14:14:43,594 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2022-04-05 14:14:43,594 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-04-05 14:14:43,672 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [restartedMain] Initializing Spring embedded WebApplicationContext
+2022-04-05 14:14:43,672 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 1114 ms
+2022-04-05 14:14:43,729 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-04-05 14:14:43,744 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-6 - Starting...
+2022-04-05 14:14:43,751 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-6 - Start completed.
+2022-04-05 14:14:43,752 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-04-05 14:15:02,305 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-04-05 14:15:02,307 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-04-05 14:15:02,490 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-04-05 14:15:02,658 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2022-04-05 14:15:02,664 INFO org.apache.coyote.http11.Http11NioProtocol [restartedMain] Starting ProtocolHandler ["http-nio-8080"]
+2022-04-05 14:15:02,671 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8080 (http) with context path ''
+2022-04-05 14:15:02,682 INFO acc.br.cadastro.CadastroAcademico [restartedMain] Started CadastroAcademico in 20.243 seconds (JVM running for 19478.349)
+2022-04-05 14:15:02,684 INFO org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener [restartedMain] Condition evaluation unchanged
+2022-04-05 14:15:02,684 INFO acc.br.cadastro.CadastroAcademico [restartedMain] Cadastro academico iniciada e pronta para uso.
