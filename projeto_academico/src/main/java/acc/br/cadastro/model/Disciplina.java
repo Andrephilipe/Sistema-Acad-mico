@@ -1,10 +1,21 @@
+/****************************************************
+ * Autor : André Philipe
+ * Data criacao: 04/04/2022
+ * Nome do arquivo: Classe Disciplina
+ * Arquivo de implementacao da classe Disciplina
+ ***************************************************/
+
+/****Pacote da classe****/
 package acc.br.cadastro.model;
+
+/***INICIO: Imports da classe***/
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+/***FIM: Imports da classe***/
 
 @Entity
 @Table
@@ -21,12 +32,16 @@ public class Disciplina {
     @Column(name = "DisciplinaCreditos")
     private int discCredt;
 
+    /*INICIO: Getters E Setters idDisciplina*/ 
     public Integer getIdDisciplina() {
         return idDisciplina;
     }
     public void setId(Integer idDisciplina) {
         this.idDisciplina = idDisciplina;
     }
+    /*FIM: Getters E Setters idDisciplina*/ 
+
+    /*INICIO: Getters E Setters nomeDisc*/ 
     public String getNomeDisc() {
         return nomeDisc;
     }
@@ -45,11 +60,15 @@ public class Disciplina {
            this.nomeDisc = nomeDisc; 
         }
     }
-    
+    /*FIM: Getters E Setters nomeDisc*/
+
+    /*INICIO: Getters E Setters discCredt*/ 
     public int getDiscCredt() {
         return discCredt;
     }
     public void setDiscCredt(int discCredt) {
         this.discCredt = discCredt;
     }
+    /*FIM: Getters E Setters discCredt*/ 
+
 }

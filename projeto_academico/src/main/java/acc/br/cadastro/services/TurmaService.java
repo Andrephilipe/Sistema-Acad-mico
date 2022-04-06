@@ -1,19 +1,21 @@
-/*******************************************
- * Autor : André Philipe
- * Data criacao: 26/03/2022
- * Nome do arquivo: Classe TurmaService
- * Arquivo de implementacao da classe TurmaService
- *******************************************/
+/**************************************************
+* Autor : André Philipe
+* Data criacao: 26/03/2022
+* Nome do arquivo: Classe TurmaService
+* Arquivo de implementacao da classe TurmaService
+**************************************************/
 
+/****Pacote da classe****/
 package acc.br.cadastro.services;
 
+//INICIO: Imports do services
 import java.util.List;
 import java.util.ArrayList;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import acc.br.cadastro.repository.TurmaRepository;
 import acc.br.cadastro.model.Turma;
-
+//FIM: Imports do services
 
 @Service
 public class TurmaService {
@@ -21,7 +23,6 @@ public class TurmaService {
         @Autowired
         TurmaRepository turmaRepository;
         
-        //reositorio turma 
         public List<Turma> getAllTurmas()
         {
             List<Turma> turmas = new ArrayList<Turma>();

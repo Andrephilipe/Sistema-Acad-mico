@@ -1,9 +1,9 @@
 /*******************************************
- * Autor : André Philipe
- * Data criacao: 26/03/2022
- * Nome do arquivo: Classe Pessoa
- * Arquivo de implementacao da classe pessoa
- *******************************************/
+* Autor : André Philipe
+* Data criacao: 26/03/2022
+* Nome do arquivo: Classe Pessoa
+* Arquivo de implementacao da classe pessoa
+*******************************************/
 
 /****Pacote da classe****/
 package acc.br.cadastro.model;
@@ -32,13 +32,16 @@ public class Pessoa {
 
     @Column(name="PESSOACPF", nullable=false, length=14)
     private String cpf;
-    //Enum tipo sexo
+
+    /*INICIO: enun sexo*/ 
     public enum Sexo {
 
         MASCULINO,
         FEMININO,
         OUTROS;
     }
+    /*FIM: enun sexo*/ 
+
     @Column(name = "PESSOASexo")
     private String pessoaSexo;
 
@@ -48,16 +51,16 @@ public class Pessoa {
     @Column(name = "Turma_idTurma")
     public int turma_idTurma;
 
-    /*INICIO: GETRS E SETS IDpessoa*/ 
+    /*INICIO: Getters E Setters idPessoa*/ 
     public Integer getIdPessoa() {
         return idPessoa;
     }
     public void setIdPessoa(Integer idPessoa) {
         this.idPessoa = idPessoa;
     }
-    /*FIM: GETRS E SETS IDpessoa*/ 
+    /*FIM: Getters E Setters idPessoa*/ 
 
-    /*INICIO: GETRS E SETS PESSOAnome*/ 
+    /*INICIO: Getters E Setters pessoaNome*/ 
     public String getPessoaNome() {
         return pessoaNome;
     }
@@ -76,9 +79,9 @@ public class Pessoa {
            this.pessoaNome = pessoaNome; 
         }
     }
-    /*FIM: GETRS E SETS PESSOAnome*/ 
+    /*INICIO: Getters E Setters pessoaNome*/ 
     
-    /*INICIO: GETRS E SETS PESSOASexo*/ 
+    /*INICIO: Getters E Setters PESSOASexo*/ 
     public String getPessoaSexo() {
         return pessoaSexo;
     }
@@ -117,7 +120,7 @@ public class Pessoa {
         }
         System.out.println("FIM: case pessoaSexo");
     }
-    /*FIM: GETRS E SETS PESSOASexo*/ 
+    /*FIM: Getters E Setters PESSOASexo*/ 
 
     /*INICIO: Getters and Setters PessoaTipo*/ 
     public String getPessoaTipo() {
@@ -130,7 +133,6 @@ public class Pessoa {
         if(pessoaTipo == "" || pessoaTipo == null){
 
             throw new Exception("O campo tipo é obrigatorio.");
-            //sthis.tipo = new ObjectMapper().writeValueAsString(pessoaTipoA.ALUNO);
         }
         else if(pessoaTipo.equals(alunoB) || pessoaTipo.equals(alunoNb) == true)
         {
@@ -143,9 +145,9 @@ public class Pessoa {
         }
 
     }
-    /*FIM: GETRS E SETS PessoaTipo*/ 
+    /*FIM: Getters E Setters PessoaTipo*/ 
 
-    /*INICIO: GETRS E SETS PESSOACPF*/ 
+    /*INICIO: Getters E Setters PESSOACPF*/ 
     public String getCpf() {
         return cpf;
     }
@@ -163,15 +165,15 @@ public class Pessoa {
            this.cpf = cpf; 
         }
     }
-    /*FIM: GETRS E SETS PESSOACPF*/ 
+    /*FIM: Getters E Setters PESSOACPF*/ 
 
-    /*INICIO: GETRS E SETS Turma_idTurma*/ 
+    /*INICIO: Getters E Setters Turma_idTurma*/ 
     public int getTurma_idTurma() {
         return turma_idTurma;
     }
     public void setidTurma(int turma_idTurma) {
         this.turma_idTurma = turma_idTurma;
     }
-    /*FIM: GETRS E SETS Turma_idTurma*/ 
+    /*FIM: Getters E Setters Turma_idTurma*/ 
 
 }

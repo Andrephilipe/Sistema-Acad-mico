@@ -1,9 +1,9 @@
 /*******************************************
- * Autor : André Philipe
- * Data criacao: 26/03/2022
- * Nome do arquivo: Classe Turma
- * Arquivo de implementacao da classe Turma
- *******************************************/
+* Autor : André Philipe
+* Data criacao: 26/03/2022
+* Nome do arquivo: Classe Turma
+* Arquivo de implementacao da classe Turma
+*******************************************/
 
 /****Pacote da classe****/
 package acc.br.cadastro.model;
@@ -27,13 +27,17 @@ public class Turma implements Serializable{
     private int idTurma;
     @Column(name="turmaDesc", nullable=false, length=45)
     private String turmaDesc;
-
+    
+    /*INICIO: Getters E Setters idTurma*/ 
     public int getIdTurma() {
         return idTurma;
     }
     public void setIdTurma(int idTurma) {
         this.idTurma = idTurma;
     }
+    /*FIM: Getters E Setters idTurma*/ 
+
+    /*INICIO: Getters E Setters turmaDesc*/ 
     public String getTurmaDesc() {
         return turmaDesc;
     }
@@ -53,18 +57,6 @@ public class Turma implements Serializable{
             this.turmaDesc = "não identificado";
         }
     }
-
-    @Column
-    private int qtTurma;
-
-    public int getQtTurma() {
-        return qtTurma;
-    }
-
-
-    public void setQtTurma(int qtTurma) {
-
-        this.qtTurma ++;
-    }
+    /*FIM: Getters E Setters turmaDesc*/ 
     
 }
