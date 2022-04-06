@@ -5,7 +5,7 @@
  * Arquivo de implementacao da classe Aluno
  ********************************************/
 
- /****Pacote da classe****/
+/****Pacote da classe****/
 package acc.br.cadastro.model;
 
 //INICIO: Imports da classe
@@ -22,6 +22,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 @Entity
 @Table(name = "ALUNO")
 public class Aluno{
+
     @Id
     @GeneratedValue(strategy=GenerationType.SEQUENCE, generator="aluno_sequence")
     @Column(name="idAluno")
@@ -29,22 +30,23 @@ public class Aluno{
     private int mensalidade_VL_mensalidade;
     private String tipo;
     private int turmaId;
-    public int getTurmaId() {
-        return turmaId;
-    }
-    public void setTurmaId(int turmaId) {
-        this.turmaId = turmaId;
-    }
+
+    /*INICIO: enun tipoAluno*/ 
     private enum tipoAluno{
         ALUNO, ALUNOBOLSISTA
     }
+    /*FIM: enun tipoAluno*/ 
 
+    /*INICIO: Getters E Setters idAluno*/ 
     public int getIdAluno() {
         return idAluno;
     }
     public void setIdAluno(int idAluno) {
         this.idAluno = idAluno;
     }
+    /*FIM: Getters E Setters idAluno*/ 
+
+    /*INICIO: Getters E Setters mensalidade_VL_mensalidade*/ 
     public int getMen() {
         return mensalidade_VL_mensalidade;
     }
@@ -82,12 +84,23 @@ public class Aluno{
         System.out.println("Fim case de mensalidades.");
 
     }
-    //teste tipo bolsa
-   public String getTipo() {
+    /*FIM: Getters E Setters mensalidade_VL_mensalidade*/ 
+
+    /*INICIO: Getters E Setters tipo*/ 
+    public String getTipo() {
         return tipo;
-   }
+    }
     public void setTipo(String tipo) {
        this.tipo = tipo;
     }
+    /*FIM: Getters E Setters tipo*/ 
 
+    /*INICIO: Getters E Setters turmaId*/ 
+    public int getTurmaId() {
+        return turmaId;
+    }
+    public void setTurmaId(int turmaId) {
+        this.turmaId = turmaId;
+    }
+    /*FIM: Getters E Setters turmaId*/ 
 }

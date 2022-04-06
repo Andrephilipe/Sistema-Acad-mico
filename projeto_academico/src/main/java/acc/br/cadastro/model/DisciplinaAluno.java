@@ -26,31 +26,22 @@ public class DisciplinaAluno {
     @Column(name = "Aluno_IDAlunos")
     private int idAluno;
 
-    /*INICIO: GETRS E SETS idDisciplinaAl*/ 
+    /*INICIO: Getters e Setters idDisciplinaAl*/ 
     public int getId() {
         return idDisciplinaAl;
     }
     public void setId(int idDisciplinaAl) {
         this.idDisciplinaAl = idDisciplinaAl;
     }
-    /**FIM: GETRS E SETRS idDisciplinaAl**/
+    /**FIM: Getters e Setters idDisciplinaAl**/
 
-    /*INICIO: GETRS E SETS idAluno*/ 
+    /*INICIO: Getters e Setters idAluno*/ 
     public int getIdAluno() {
         return idAluno;
     }
     public void setIdAluno(int idAluno) {
         this.idAluno = idAluno;
     }
-    /*FIM: GETRS E SETS idAluno*/
-
-    /*INICIO: GETRS E SETS idPessoa
-    public int getIdPessoa() {
-        return idPessoa;
-    }
-    public void setIdPessoa(int idPessoa) {
-        this.idPessoa = idPessoa;
-    }
-    /*FIM: GETRS E SETS idPessoa*/ 
-
+    /*FIM: Getters e Setters idAluno*/
+    
 }
