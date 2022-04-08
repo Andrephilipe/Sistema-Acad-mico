@@ -35,8 +35,8 @@ import acc.br.cadastro.services.TurmaService;
 @RestController
 public class CadastroController {
     
-    @Autowired
-    PessoaService pessoaService;
+    //@Autowired
+    //PessoaService pessoaService;
     @Autowired
     DisciplinaService disciplinaService;
     @Autowired
@@ -46,7 +46,7 @@ public class CadastroController {
     @Autowired
     MatriculaAlunoService matriculaAlunoService;
 
-    /**INICIO - Anotacoes rest pessoa**/
+    /**INICIO - Anotacoes rest pessoa
     @GetMapping("/pessoa")
     private List<Pessoa> getAllPessoa()
     {
