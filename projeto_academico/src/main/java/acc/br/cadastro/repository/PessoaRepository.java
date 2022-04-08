@@ -14,5 +14,5 @@ import acc.br.cadastro.model.Pessoa;
 //FIM: Imports da interface
 
 public interface PessoaRepository extends CrudRepository<Pessoa, Integer>{
-    
+
 }
