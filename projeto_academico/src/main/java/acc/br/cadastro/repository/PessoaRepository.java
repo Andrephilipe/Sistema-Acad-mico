@@ -8,14 +8,11 @@
 /****Pacote da classe****/
 package acc.br.cadastro.repository;
 
-import java.util.List;
-
-import org.springframework.data.jpa.repository.JpaRepository;
 //INICIO: Imports da interface
 import org.springframework.data.repository.CrudRepository;
 import acc.br.cadastro.model.Pessoa;
 //FIM: Imports da interface
 
-public interface PessoaRepository extends JpaRepository<Pessoa, Integer>{
+public interface PessoaRepository extends CrudRepository<Pessoa, Integer>{
 
 }
