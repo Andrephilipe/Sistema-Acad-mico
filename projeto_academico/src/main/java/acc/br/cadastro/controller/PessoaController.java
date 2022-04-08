@@ -23,7 +23,7 @@ public class PessoaController {
     public ModelAndView listar(){
         ModelAndView modelAndView = new ModelAndView("pessoa/consultarpessoa.html");
 
-        List<Pessoa> pessoas = pessoaService.findAll();
+        List<Pessoa> pessoas = PessoaRepository.getAllPessoa();
         modelAndView.addObject("pessoas", pessoas);
 
         return modelAndView;
